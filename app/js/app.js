@@ -10,7 +10,7 @@ mudunoApp.config(['$routeProvider',
                 templateUrl: 'partials/overview.html',
                 controller: 'OverviewCtrl'
             }).
-            when('/phones/:phoneId', {
+            when('/location', {
                 templateUrl: 'partials/location.html',
                 controller: 'LocationCtrl'
             }).
