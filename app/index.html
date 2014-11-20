@@ -15,20 +15,15 @@
 <div ng-controller="OverviewCtrl">
 
     <ul class="nav nav-tabs">
-        <li role="presentation"><a href="">Overview</a></li>
+        <li role="presentation"><a href="" ng-click="tab = 1">{{'Overview'}}</a></li>
+        <li role="presentation"><a href="" ng-click="tab = 2">{{'Location'}}</a></li>
+        <li role="presentation"><a href="" ng-click="tab = 3">{{'Engagement'}}</a></li>
+        <li role="presentation"><a href="" ng-click="tab = 4">{{'Control'}}</a></li>
+        <li role="presentation"><a href="" ng-click="tab = 5">{{'Contact'}}</a></li>
+        <li role="presentation"><a href="" ng-click="tab = 2">{{'Alerts'}}</a></li>
     </ul>
 
-    <div>{{ greeting }}</div>
-
-</div>
-
-<div ng-controller="LocationCtrl">
-    
-    <ul class="nav nav-tabs">
-        <li role="presentation"><a href="">{{'LOCATION'}}</a></li>
-    </ul>
-
-    <div>{{ greeting }}</div>
+    <div>{{ tab }}</div>
 
 </div>
 
