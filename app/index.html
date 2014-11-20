@@ -11,21 +11,50 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
+<div class="container-fluid">
+    <div class="row">
+        <div ng-controller="PanelCtrl as panel" class="col-md-10 col-md-offset-1">
 
-<div ng-controller="OverviewCtrl">
+            <h1>Muduno</h1>
 
-    <ul class="nav nav-tabs">
-        <li role="presentation"><a href="" ng-click="tab = 1">{{'Overview'}}</a></li>
-        <li role="presentation"><a href="" ng-click="tab = 2">{{'Location'}}</a></li>
-        <li role="presentation"><a href="" ng-click="tab = 3">{{'Engagement'}}</a></li>
-        <li role="presentation"><a href="" ng-click="tab = 4">{{'Control'}}</a></li>
-        <li role="presentation"><a href="" ng-click="tab = 5">{{'Contact'}}</a></li>
-        <li role="presentation"><a href="" ng-click="tab = 2">{{'Alerts'}}</a></li>
-    </ul>
+            <ul class="nav nav-tabs">
+                <li ng-class="{ active : panel.isSelected(1) }" role="presentation">
+                    <a href="" ng-click="panel.selectTab(1)">{{'Overview'}}</a>
+                </li>
+                <li ng-class="{ active : panel.isSelected(2) }" role="presentation">
+                    <a href="" ng-click="panel.selectTab(2)">{{'Location'}}</a>
+                </li>
+                <li ng-class="{ active : panel.isSelected(3) }" role="presentation">
+                    <a href="" ng-click="panel.selectTab(3)">{{'Engagement'}}</a>
+                </li>
+                <li ng-class="{ active : panel.isSelected(4) }" role="presentation">
+                    <a href="" ng-click="panel.selectTab(4)">{{'Control'}}</a>
+                </li>
+                <li ng-class="{ active : panel.isSelected(5) }" role="presentation">
+                    <a href="" ng-click="panel.selectTab(5)">{{'Contact'}}</a>
+                </li>
+                <li ng-class="{ active : panel.isSelected(6) }" role="presentation">
+                    <a href="" ng-click="panel.selectTab(6)">{{'Alerts'}}</a>
+                </li>
+            </ul>
 
-    <div>{{ tab }}</div>
+            <div>{{ tab }}</div>
+            
+            <div class="panel" ng-show="panel.isSelected(1)">Overview</div>
+            <div class="panel" ng-show="panel.isSelected(2)">Location</div>
+            <div class="panel" ng-show="panel.isSelected(3)">Engagement</div>
+            <div class="panel" ng-show="panel.isSelected(4)">Control</div>
+            <div class="panel" ng-show="panel.isSelected(5)">Contact</div>
+            <div class="panel" ng-show="panel.isSelected(6)">Alerts</div>
 
+        </div>
+<!--     </div>
 </div>
 
+<div class="container-fluid">
+    <div class="row"> -->
+        
+    </div>
+</div>
 </body>
 </html>
