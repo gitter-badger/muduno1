@@ -12,7 +12,25 @@
 </head>
 <body>
 
-    <div ng-view></div>
+<div ng-controller="OverviewCtrl">
+
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="">Overview</a></li>
+    </ul>
+
+    <div>{{ greeting }}</div>
+
+</div>
+
+<div ng-controller="LocationCtrl">
+    
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="">{{'LOCATION'}}</a></li>
+    </ul>
+
+    <div>{{ greeting }}</div>
+
+</div>
 
 </body>
 </html>

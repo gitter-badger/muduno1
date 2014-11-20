@@ -1,9 +1,10 @@
-var mudunoControllers = angular.module('mudunoControllers', []);
+var mudunoApp = angular.module('mudunoApp', []);
 
-mudunoControllers.controller('OverviewCtrl', function ($scope) {
+
+mudunoApp.controller('OverviewCtrl', function ($scope) {
   $scope.greeting = "hello";
 });
 
-mudunoControllers.controller('LocationCtrl', function ($scope) {
+mudunoApp.controller('LocationCtrl', function ($scope) {
   $scope.greeting = "this is the location page";
 });
