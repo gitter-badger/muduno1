@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Practice</title>
+
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="js/controllers.js"></script>
+    
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+
     <script src="js/app.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/controllers.js"></script>
 </head>
 <body>
 <div class="container-fluid">
     <div class="row">
+
         <div ng-controller="PanelCtrl as panel" class="col-md-10 col-md-offset-1">
 
             <h1>Muduno</h1>
@@ -33,32 +40,39 @@
                 <li ng-class="{ active : panel.isSelected(5) }" role="presentation">
                     <a href="" ng-click="panel.selectTab(5)">{{'Contact'}}</a>
                 </li>
-                <li ng-class="{ active : panel.isSelected(6) }" role="presentation">
-                    <a href="" ng-click="panel.selectTab(6)">{{'Alerts'}}</a>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" href="" data-toggle="dropdown">Alerts <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Campaign ends soon!</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">High Volume in King's Cross</a></li>
+                    </ul>
                 </li>
             </ul>
 
             <div>{{ tab }}</div>
             
+            <!-- Overview Panel -->
             <div class="panel" ng-show="panel.isSelected(1)">Overview</div>
+            
+            <!-- Location Panel -->
             <div class="panel" ng-show="panel.isSelected(2)">Location</div>
+            
+            <!-- Engagement Panel -->
             <div class="panel" ng-show="panel.isSelected(3)">
                 <img src="img/engagement.png" alt="" class="img-responsive">
             </div>
+
+            <!-- Control Panel -->
             <div class="panel" ng-show="panel.isSelected(4)">
                 <img src="img/control.png" alt="" class="img-responsive">
             </div>
+
+            <!-- Contact Panel -->
             <div class="panel" ng-show="panel.isSelected(5)">
                 <img src="img/contact.png" alt="" class="img-responsive">
             </div>
-            <div class="panel" ng-show="panel.isSelected(6)">Alerts</div>
 
         </div>
-<!--     </div>
-</div>
-
-<div class="container-fluid">
-    <div class="row"> -->
         
     </div>
 </div>
