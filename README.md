@@ -1,7 +1,9 @@
 Muduno
 =======
 
-##clone this repository
+`git clone` this repository
+
+if you don't have bower or http-server installed already:
 
 `npm install`
 
@@ -9,6 +11,6 @@ then
 
 `bower install`
 
-to view in browser run:
+To view in browser run:
 
 `http-server -p 8000`
