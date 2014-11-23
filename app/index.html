@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/daterangepicker-bs3.css" />
+    <link rel="stylesheet" href="css/location.css">
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/js/dropdown.js"></script>
@@ -91,7 +92,43 @@
             <div class="panel" ng-show="panel.isSelected(1)">Overview</div>
             
             <!-- Location Panel -->
-            <div class="panel" ng-show="panel.isSelected(2)">Location</div>
+            <div class="panel" ng-show="panel.isSelected(2)" ng-controller="DataTableCtrl as locations"> 
+                <div class="col-md-4">
+                    <div class="accordion__container"></div>
+                    <div ng-controller="AccordionCtrl" ng-repeat="location in locations | limitTo: 6">
+                        <div class="accordion__tab">
+                            <div class="accordion__tab-title1" ng-click="openTab('tab one')">{{location.location}}</div>
+                            <div class="accordion__tab-content" ng-show="isOpenTab('tab one')">
+                                <h2 id="tableHeader">Overview</h2>
+                                <table class="locationData">                              
+                                    <tr class="tableL1">
+                                        <td>Engagements</td>
+                                        <td>{{location.engagements}}</td>
+                                    </tr>
+                                    <tr class="tableGrey">
+                                        <td>Social Shares</td>
+                                        <td>{{location.socialShares}}</td>
+                                    </tr>
+                                    <tr class="tableL1">
+                                        <td>Claims</td>
+                                        <td>{{location.claims}}</td>
+                                    </tr>
+                                    <tr class="tableGrey">
+                                        <td>Rewards Left</td>
+                                        <td>{{location.rewardsLeft}}</td>
+                                    </tr>
+                                    <tr class="tableL1">
+                                        <td>Reward Type</td>
+                                        <td>{{location.rewardType}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             
             <!-- Engagement Panel -->
             <div class="panel" ng-show="panel.isSelected(3)">
