@@ -22,7 +22,8 @@
 </head>
 <body>
 <div class="container-fluid" style="margin-top: 20px;">
-    <div class="row">
+    <div class="row header">
+
         <div class="col-md-7 col-md-offset-1">
             <h1>Muduno</h1>
         </div>
@@ -32,28 +33,14 @@
                     <div class="control-group">
                         <div class="controls">
                             <div class="input-prepend input-group">
-                                <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span><input type="text" style="width: 200px" name="reservation" id="reservation" class="form-control" value="03/18/2013 - 03/23/2013" /> 
+                                <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span><input type="text" style="width: 200px" name="reservation" id="reservation" class="form-control" value="01/11/2014 - 31/12/2014" /> 
                             </div>
                         </div>
                     </div>
                 </fieldset>
-            </form>
-
-            <script type="text/javascript">
-            $(document).ready(function() {
-                $('#reservation').daterangepicker(
-                    {
-                        format: 'DD-MMMM-YYYY',
-                        startDate: '01-10-2014',
-                        endDate: '31-12-2015'
-                    }, 
-                    function(start, end, label) {
-                        console.log(start.toISOString(), end.toISOString(), label);
-                    }
-                );
-            });
-            </script>            
+            </form> 
         </div>
+
     </div>
 
     <div class="row">
@@ -88,7 +75,50 @@
             <div>{{ tab }}</div>
             
             <!-- Overview Panel -->
-            <div class="panel" ng-show="panel.isSelected(1)">Overview</div>
+            <div class="panel" ng-show="panel.isSelected(1)">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-8">
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-default">Hourly</button>
+                            <button class="btn btn-default">Daily</button>
+                            <button class="btn btn-default">Weekly</button>
+                            <button class="btn btn-default">Monthly</button>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <h1 style="text-align:center;padding:60px;">Graph goes here</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4>Engagements</h4>
+                        <div class="col-md-12">
+                            <blockquote>##</blockquote>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Average Time on App</h4>
+                        <div class="col-md-12">
+                            <blockquote>##</blockquote>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h1 style="text-align:center;padding:25px;">Graph goes here</h1>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Top Locations</h4>
+                        <div class="col-md-12">
+                            <blockquote>##</blockquote>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Campaign Days Left</h4>
+                        <div class="col-md-12">
+                            <blockquote>##</blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <!-- Location Panel -->
             <div class="panel" ng-show="panel.isSelected(2)">Location</div>
@@ -114,14 +144,32 @@
 </div>
 
 
-
-
-
 <script type="text/javascript">
+
 $(document).ready(function() {
-  $('input[name="daterange"]').daterangepicker();
+    $('#reservation').daterangepicker(
+        {
+            format: 'DD/MM/YYYY',
+            startDate: '01/11/2014',
+            endDate: '31/12/2014',
+            showDropdowns: true,
+            opens: 'left'
+        },
+        function(start, end) {
+            dates = {
+                startYear: start.format('YYYY'),
+                startMonth: start.format('MM'),
+                startDay: start.format('DD'),
+                endYear: end.format('YYYY'),
+                endMonth: end.format('MM'),
+                endDay: end.format('DD'),
+            }
+            console.log(dates);
+        }
+    );
 });
-</script>
+
+</script>   
 
 </body>
 </html>
