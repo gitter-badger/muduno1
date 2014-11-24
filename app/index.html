@@ -44,7 +44,7 @@
 
     </div>
 
-    <div class="row">
+    <div class="row main-wrapper">
 
         <div ng-controller="PanelCtrl as panel" class="col-md-10 col-md-offset-1">
 
@@ -194,12 +194,12 @@ $(document).ready(function() {
         },
         function(start, end) {
             dates = {
-                startYear: start.format('YYYY'),
-                startMonth: start.format('MM'),
                 startDay: start.format('DD'),
-                endYear: end.format('YYYY'),
-                endMonth: end.format('MM'),
+                startMonth: start.format('MM'),
+                startYear: start.format('YYYY'),
                 endDay: end.format('DD'),
+                endMonth: end.format('MM'),
+                endYear: end.format('YYYY'),
             }
             console.log(dates);
         }
