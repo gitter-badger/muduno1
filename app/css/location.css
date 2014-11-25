@@ -1,33 +1,49 @@
+/*general styling for all location data panels*/
 .locationData {
   width: 312px;
   border: 1px solid white;
   border-width: 1px;
   padding: 10px; }
+  .locationData tr:nth-child(even) {
+    background-color: #F2F2F2;
+    color: #95999C;
+    height: 40px;
+    border: 1px solid white;
+    border-width: 1px; }
+  .locationData tr:nth-child(odd) {
+    color: #95999C;
+    height: 40px;
+    border: 1px solid white;
+    border-width: 1px; }
+  .locationData td {
+    border: 1px solid white;
+    border-width: 1px;
+    padding-left: 5px; }
 
-/* eve rows = grey rows across all tables*/
-.locationData tr:nth-child(even) {
-  background-color: #F2F2F2;
-  color: #95999C;
-  height: 40px;
-  border: 1px solid white;
-  border-width: 1px; }
-
-.locationData table:nth-child(2) tr:nth-child(odd) {
-  opacity: 50%;
+.loc1 {
   background-color: #DBEDF4;
-  color: #95999C;
-  height: 30px; }
+  color: #95999C; }
 
-/*.accordion__tab-content.locationData:nth-child(3) {   
-    tr:nth-child(odd) 
-        {
-        opacity: 50%;
-        background-color: $location2;
-        color: #95999C;
-        height: 30px;
-        
-    }
-}*/
+.loc2 {
+  background-color: #FFDFC4;
+  color: #95999C; }
+
+.loc3 {
+  background-color: #ffbbba;
+  color: #95999C; }
+
+.loc4 {
+  background-color: #e3e3e3;
+  color: #95999C; }
+
+.loc5 {
+  background-color: #D4CCFF;
+  color: #95999C; }
+
+.loc6 {
+  background-color: #cef2cb;
+  color: #95999C; }
+
 /* All accordion content */
 .accordion__container {
   margin-top: 30px; }
@@ -86,16 +102,14 @@
 
 #tableHeader {
   width: 312px;
-  height: 30px;
+  height: 40px;
   background-color: #F2F2F2;
   color: #95999C;
   text-align: center;
   font-size: 15px;
   border: 1px white;
   padding-top: 7.5px;
-  padding-bottom: 7.5px;
-  margin-top: 5px;
-  margin-bottom: 5px; }
+  margin-top: 5px; }
 
 .triangle {
   float: right;

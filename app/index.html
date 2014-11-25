@@ -124,14 +124,16 @@
             <!-- Location Panel -->
             <div class="panel" ng-show="panel.isSelected(2)" ng-controller="DataTableCtrl as locations"> 
                 <div class="col-md-4">
-                    <div class="accordion__container"></div>
-                
-                           
-                             <div class="accordion__tab-title"ng-controller="AccordionCtrl" ng-repeat="location in locations | limitTo: 6"ng-click="openTab('tab one')"><h5 class="locationTitle">{{location.location}}<div class="triangle"><span class="glyphicon glyphicon-play"></span></div></h5> 
-
-                            <div class="accordion__tab-content" ng-show="isOpenTab('tab one')">
+                    <div class="accordion__container"></div>   
+                    
+                    <div class="accordion__tab-title"ng-controller="AccordionCtrl" ng-repeat="location in locations | limitTo: 6"ng-click="openTab('tab one')"><h5 class="locationTitle">{{location.location}}<div class="triangle"><span class="glyphicon glyphicon-play"></span></div></h5> 
+   
+                            <div class="accordion__tab-content" ng-show="isOpenTab('tab one')"> 
+           
                                 <h2 id="tableHeader">Overview</h2>
+                                 <div ng-class="{'loc1' : $index == 0, 'loc2' : $index == 1, 'loc3' : $index == 2, 'loc4' : $index == 3, 'loc5' : $index == 4, 'loc6' : $index == 5}" >
                                 <table class="locationData">                              
+                             
                                     <tr>
                                         <td>Engagements</td>
                                         <td>{{location.engagements}}</td>
@@ -153,12 +155,12 @@
                                         <td>{{location.rewardType}}</td>
                                     </tr>
                                 </table>
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
     
-
+            </div>
 
             
             <!-- Engagement Panel -->
