@@ -9,23 +9,29 @@
 
 <!-- STYLESHEETS -->
     <link rel="stylesheet" href="css/location.css">
+    <link rel="stylesheet" href="css/main.css">
     
 <!-- TWITTER BOOTSTRAP & JQUERY -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+<!-- D3 SCRIPT TAG -->
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
 
 <!-- ANGULAR -->
     <script src="bower_components/angular/angular.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/app.js"></script>
-
+   
 <!-- DATERANGEPICKER -->
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/daterangepicker.js"></script>
     <link rel="stylesheet" type="text/css" href="css/daterangepicker-bs3.css" />
 
+<!-- LINK JAVASCRIPT FILES -->
+    <script src="js/controllers.js"></script>
+    <script src="js/app.js"></script>
+   
 </head>
 <body>
 <div class="container-fluid" style="margin-top: 20px;">
@@ -90,9 +96,9 @@
                             <button class="btn btn-default">Monthly</button>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <h1 style="text-align:center;padding:60px;">Graph goes here</h1>
-                    </div>
+                
+                       <svg class = "chart"></svg> 
+                  
                 </div>
                 <div class="row">
                     <div class="col-md-3">
@@ -231,7 +237,7 @@ $(document).ready(function() {
 });
 
 </script>   
-
+<script type="text/javascript" src="js/overview.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=AIzaSyDTzahCEc8Rvg1HnKAfsZ3jonSZFzRE1CY.exp"></script>
 <script type="text/javascript" src="js/map.js"></script>
 
