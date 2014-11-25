@@ -1,3 +1,15 @@
 
 
 /*# sourceMappingURL=main.css.map */
+
+#containermap {
+	height: 800px;
+	width: 800px;
+}
+
+#map-canvas {
+	height: 600px;
+	width: 600px;
+	margin: 0px;
+	padding: 0px
+}
