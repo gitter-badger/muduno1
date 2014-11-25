@@ -1,6 +1,39 @@
+$lato:'Lato', sans-serif;
+
+
 body {
   font: 10px sans-serif;
 }
+
+.nav {
+	li {
+		font-size: 18px;
+	}
+}
+
+.container-fluid {
+	.header {
+		.col-md-7 {
+			h1{
+				font-size: 45px;
+				color: #90ccde;
+				font-family: $lato; 
+			}
+		}
+	}
+	.main-wrapper {
+		.col-md-10 {
+			.panel {
+				.row {
+					p {
+						font-size: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+
 
 .line {
  	stroke: steelblue;

@@ -46,7 +46,7 @@ mudunoApp.controller('DataTableCtrl', function ($scope){
   $scope.locations = [
     {
         "locationID": "1", 
-        "location": "King's Cross Station", 
+        "location": "King's Cross", 
         "engagements": "1234", 
         "socialShares": "500", 
         "claims": "342",
@@ -56,7 +56,7 @@ mudunoApp.controller('DataTableCtrl', function ($scope){
     }, 
     {
         "locationID": "2", 
-        "location": "Borough Market",
+        "location": "Covent Garden",
         "engagements": "1654", 
         "socialShares": "5045", 
         "claims": "765",
@@ -65,7 +65,7 @@ mudunoApp.controller('DataTableCtrl', function ($scope){
     }, 
     {
         "locationID": "3", 
-        "location": "Oxford Circus",
+        "location": "Embankment",
         "engagements": "16876", 
         "socialShares":"3453", 
         "claims": "142346",
@@ -75,7 +75,7 @@ mudunoApp.controller('DataTableCtrl', function ($scope){
     }, 
     {
         "locationID": "4", 
-        "location": "Picadilly Circus",
+        "location": "Barbican",
         "engagements": "634534", 
         "socialShares": "8686", 
         "claims": "3000",
@@ -84,7 +84,7 @@ mudunoApp.controller('DataTableCtrl', function ($scope){
     }, 
     {
         "locationID": "5", 
-        "location": "Notting Hill Gate", 
+        "location": "Liverpool Street", 
         "engagements": "9598", 
         "socialShares": "5053", 
         "claims": "584",
@@ -93,7 +93,7 @@ mudunoApp.controller('DataTableCtrl', function ($scope){
     },
     {
         "locationID": "6", 
-        "location": "Brick Lane", 
+        "location": "Oxford Circus", 
         "engagements": "789", 
         "socialShares": "234", 
         "claims": "109",
