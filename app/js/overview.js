@@ -6,20 +6,44 @@ var setSvgSize = d3.select(".chart")
 		.attr("width", width)
 		.attr("height", height);
 
+$(".hourButton").on('click', function () {
+	$('.chart').empty();
+ 	createHourlyGraph();
+ });
+
+$(".dailyButton").on('click', function () {
+	$('.chart').empty();
+ 	createDailyGraph();
+ });
+
+
 // load data and draw graph
-d3.tsv("data/datamuduno2.tsv", function(data) {	
-	// console.log(data)
-		 Data = d3.nest()
-		.key(function(d) { return d.date; })
-		.entries(data);
-		console.log(Data);
+function createDailyGraph() {
+		 d3.tsv("data/datamuduno2.tsv", function(data) {	
+				 Data = d3.nest()
+				.key(function(d) { return d.date; })
+				.entries(data);
+				
+		 		maxNumberEngagements = d3.max(Data, function(d) { return (d.values.length)});
 
- 		maxNumberEngagements = d3.max(Data, function(d) { return (d.values.length - 1); });
+				setPath();
+				addXaxis();
+				addYaxis();		
+		});
+};
+function createHourlyGraph() {
+		 d3.tsv("data/datamuduno2.tsv", function(data) {	
+				 Data = d3.nest()
+				.key(function(d) { return d.time.split(":")[0]; })
+				.entries(data);
+				
+		 		maxNumberEngagements = d3.max(Data, function(d) { return (d.values.length)});
 
-		setPath();
-		addXaxis();
-		addYaxis();		
-});
+				setPath();
+				addXaxis();
+				addYaxis();		
+		});
+};
 
 // set line graph path
 function setPath () {
@@ -32,7 +56,7 @@ function setPath () {
 
 function pathLine () {
 		return d3.svg.line()
-			.x(function(d,i){return ((width - 100) / (Data.length -1)) * (i+ 1);})
+			.x(function(d,i){return ((width - 100) / (Data.length -1)) * (i+ 2);})
 			.y(function(d){return scaleY()(d.values.length);})
 };		
  		
@@ -48,7 +72,7 @@ function addXaxis () {
 			.data(Data)
 			.enter().append("g")
 			.attr("class", "axis")
-      		.attr("transform", function(d,i){return "translate(" + ((width / (Data.length - 1)) * (i+1)) + ","+ (height - 40) +")";})
+      		.attr("transform", function(d,i){return "translate(" + (((width - 100) / (Data.length - 1)) * (i+2)) + ","+ (height - 20 ) +")";})
       		.append("text")
       		.attr("dy", ".71em")
       		.style("text-anchor", "end")
