@@ -34,7 +34,7 @@ function createDailyGraph() {
 function createHourlyGraph() {
 		 d3.tsv("data/datamuduno2.tsv", function(data) {	
 				 Data = d3.nest()
-				.key(function(d) { return d.time.split(":")[0]; })
+				.key(function(d) { return Number(d.time.split(":")[0]); })
 				.entries(data);
 				
 		 		maxNumberEngagements = d3.max(Data, function(d) { return (d.values.length)});
