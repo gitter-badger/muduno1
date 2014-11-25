@@ -1,0 +1,15 @@
+body {
+  font: 10px sans-serif; }
+
+.line {
+  stroke: steelblue;
+  stroke-width: 2;
+  fill: none; }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges; }
+
+/*# sourceMappingURL=main.css.map */
