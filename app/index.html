@@ -8,24 +8,26 @@
     <title>Muduno</title>
 
 <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="css/location.css">
-    <link rel="stylesheet" href="css/main.css">
     <!-- Google-fonts -->
     <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Daterangepicker -->
     <link rel="stylesheet" type="text/css" href="css/daterangepicker-bs3.css" />
+    <!-- Muduno styles -->
+    <link rel="stylesheet" href="css/location.css">
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
-<div class="container-fluid" style="margin-top: 20px;">
+<div class="container-fluid">
     <div class="row header">
 
         <div class="col-md-7 col-md-offset-1">
-            <h1><img src="img/mudunologo.png">muduno</h1>
+            <img src="img/mudunologo.png">
+            <h1>muduno</h1>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-3 datepicker-wrapper">
             <form class="form-horizontal">
                 <fieldset>
                     <div class="control-group">
@@ -71,7 +73,7 @@
             </ul>
             
             <!-- Overview Panel -->
-            <div id="overwrapper"class="panel" ng-show="panel.isSelected(1)">
+            <div id="overwrapper" class="panel" ng-show="panel.isSelected(1)">
                 <overview></overview>
             </div>
             

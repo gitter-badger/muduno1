@@ -1,25 +1,51 @@
 body {
-  font: 10px sans-serif; }
+  font-size: 16px; }
 
-.nav li {
-  font-size: 18px; }
+.header {
+  margin-top: 10px;
+  margin-bottom: 15px; }
+  .header .col-md-7 img {
+    vertical-align: top; }
+  .header .col-md-7 h1 {
+    display: inline-block;
+    font-size: 4.25em;
+    color: #90ccde;
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    vertical-align: top; }
+  .header .datepicker-wrapper form.form-horizontal {
+    padding: 20px 0; }
+    .header .datepicker-wrapper form.form-horizontal fieldset span.add-on {
+      border-radius: 0;
+      background-color: #90ccde; }
+    .header .datepicker-wrapper form.form-horizontal fieldset input.form-control {
+      border-radius: 0; }
 
-.container-fluid .header .col-md-7 h1 {
-  font-size: 45px;
-  color: #90ccde;
-  font-family: "Lato", sans-serif; }
-.container-fluid .main-wrapper .col-md-10 .panel .row p {
-  font-size: 30px; }
+ul.nav-tabs li, ul.nav-tabs li.active {
+  font-size: 1em; }
+  ul.nav-tabs li a, ul.nav-tabs li.active a {
+    padding: 5px 25px; }
+ul.nav-tabs li a {
+  color: #5D93A3; }
 
-.line {
+div.panel {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+svg.chart .line {
   stroke: steelblue;
+  stroke-width: 3;
+  fill: none; }
+svg.chart .axis text {
+  font-size: 0.8em; }
+  svg.chart .axis text path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges; }
+svg.chart .y.axisline {
+  stroke: #90ccde;
   stroke-width: 2;
   fill: none; }
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges; }
 
 /*# sourceMappingURL=main.css.map */
