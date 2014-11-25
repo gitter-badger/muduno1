@@ -87,101 +87,12 @@
             
             <!-- Overview Panel -->
             <div id="overwrapper"class="panel" ng-show="panel.isSelected(1)">
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-8">
-                        <div class="btn-group" role="group">
-                            <button class="btn btn-default">Hourly</button>
-                            <button class="btn btn-default">Daily</button>
-                            <button class="btn btn-default">Weekly</button>
-                            <button class="btn btn-default">Monthly</button>
-                        </div>
-                    </div>
-                
-                       <svg class = "chart"></svg> 
-                  
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <h4>Engagements</h4>
-                        <div class="col-md-12">
-                            <blockquote>##</blockquote>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Average Time on App</h4>
-                        <div class="col-md-12">
-                            <blockquote>##</blockquote>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h1 style="text-align:center;padding:25px;">Graph goes here</h1>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Top Locations</h4>
-                        <div class="col-md-12">
-                            <blockquote>##</blockquote>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Campaign Days Left</h4>
-                        <div class="col-md-12">
-                            <blockquote>##</blockquote>
-                        </div>
-                    </div>
-                </div>
+                <overview></overview>
             </div>
             
             <!-- Location Panel -->
             <div class="panel" ng-show="panel.isSelected(2)" ng-controller="DataTableCtrl as location"> 
-
-                <div class="panel-group col-md-4" id="accordion" role="tablist" aria-multiselectable="true">
-                    
-                    <!-- Repeat from here -->
-                    <div class="accordion__tab-title" ng-repeat="location in locations | limitTo: 6">
-
-                        <!-- Clickable Heading -->
-                        <div class="accordion-heading" role="tab" id="heading{{location.locationID}}">
-                            <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{location.locationID}}" href="#collapse{{location.locationID}}">
-                                <h5 class="locationTitle">{{location.location}}
-                                    <div class="triangle">
-                                        <span class="glyphicon glyphicon-play"></span>
-                                    </div>
-                                </h5> 
-                            </a>
-                        </div>
-                        <!-- Collapsible Section -->
-                        <div id="collapse{{location.locationID}}" class="collapse accordion__tab-content" role="tabpanel" aria-labelledby="heading{{location.locationID}}"> 
-
-                            <h2 id="tableHeader">Overview</h2>
-
-                            <div ng-class="{'loc1' : $index == 0, 'loc2' : $index == 1, 'loc3' : $index == 2, 'loc4' : $index == 3, 'loc5' : $index == 4, 'loc6' : $index == 5}" >
-                                <table class="locationData">
-                                    <tr>
-                                        <td>Engagements</td>
-                                        <td>{{location.engagements}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Social Shares</td>
-                                        <td>{{location.socialShares}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Claims</td>
-                                        <td>{{location.claims}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Rewards Left</td>
-                                        <td>{{location.rewardsLeft}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Reward Type</td>
-                                        <td>{{location.rewardType}}</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                <accordion></accordion>
 
                 <div class ="col-md-6 col-md-offset-1">
 					<div id="map-canvas"></div>

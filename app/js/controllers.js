@@ -1,5 +1,14 @@
 var mudunoApp = angular.module('mudunoApp', []);
 
+mudunoApp.directive('overview', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'inc/overview.html'
+    };
+});
+
+
+
 
 
 mudunoApp.controller('PanelCtrl', function(){
