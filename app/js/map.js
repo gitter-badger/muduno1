@@ -51,18 +51,6 @@
 		title: "OxfordCircus"
 	});
 
-// -------------- Center the map when map is moved ----------------
-
-	function initialize() {
-		google.maps.event.addListener(map, 'center_changed', function() {
-		// 3 seconds after the center of the map has changed, pan back to the
-		// marker.
-			window.setTimeout(function() {
-				map.panTo(marker.getPosition());
-			}, 3000);
-		});
-	};
-
 //-------------- When clicked on Marker it centers map ------------------
 	google.maps.event.addListener(markerKingsCross, 'click', function() {
 		map.setZoom(15);
@@ -97,7 +85,6 @@
 //------------- Start the initialize function when window is loaded -----
 	google.maps.event.addDomListener( window, 'load', function () {
 		google.maps.event.trigger(map, 'resize'); 
-		initialize ();
 	});
 
 //------------- When locationtab is clicked, map is resized and centered ---
