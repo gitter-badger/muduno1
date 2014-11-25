@@ -3,3 +3,5 @@ node_modules/
 bower_components/
 app/css/.sass-cache
 app/css/main.css.map
+app/npm-debug.log
+app/js/npm-debug.log
