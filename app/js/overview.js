@@ -1,5 +1,5 @@
-var width = 150;
-var height = 100;
+var width = 900;
+var height = 300;
 var Data = [];
 var maxNumberEngagements;
 var setSvgSize = d3.select(".chart")
