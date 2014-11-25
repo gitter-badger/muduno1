@@ -10,6 +10,7 @@
 <!-- STYLESHEETS -->
     <link rel="stylesheet" href="css/location.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
     
 <!-- TWITTER BOOTSTRAP & JQUERY -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -39,7 +40,7 @@
     <div class="row header">
 
         <div class="col-md-7 col-md-offset-1">
-            <h1>Muduno</h1>
+            <h1><img src="/img/mudunologo.png">muduno</h1>
         </div>
         <div class="col-md-2">
             <form class="form-horizontal">
@@ -63,19 +64,19 @@
 
             <ul class="nav nav-tabs">
                 <li ng-class="{ active : panel.isSelected(1) }" role="presentation">
-                    <a href="" ng-click="panel.selectTab(1)">{{'Overview'}}</a>
+                    <a href="" ng-click="panel.selectTab(1)">Overview</a>
                 </li>
                 <li ng-class="{ active : panel.isSelected(2) }" role="presentation">
-                    <a href="" class="locationstab" ng-click="panel.selectTab(2)">{{'Location'}}</a>
+                    <a href="" class="locationstab" ng-click="panel.selectTab(2)">Location</a>
                 </li>
                 <li ng-class="{ active : panel.isSelected(3) }" role="presentation">
-                    <a href="" ng-click="panel.selectTab(3)">{{'Engagement'}}</a>
+                    <a href="" ng-click="panel.selectTab(3)">Engagement</a>
                 </li>
                 <li ng-class="{ active : panel.isSelected(4) }" role="presentation">
-                    <a href="" ng-click="panel.selectTab(4)">{{'Control'}}</a>
+                    <a href="" ng-click="panel.selectTab(4)">Control</a>
                 </li>
                 <li ng-class="{ active : panel.isSelected(5) }" role="presentation">
-                    <a href="" ng-click="panel.selectTab(5)">{{'Contact'}}</a>
+                    <a href="" ng-click="panel.selectTab(5)">Contact</a>
                 </li>
                 <li role="presentation" class="dropdown">
                     <a class="dropdown-toggle" href="" data-toggle="dropdown">Alerts <b class="caret"></b></a>
@@ -145,10 +146,21 @@ $(document).ready(function() {
     );
 });
 
+<<<<<<< HEAD
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?v=AIzaSyDTzahCEc8Rvg1HnKAfsZ3jonSZFzRE1CY.exp"></script>
 <script type="text/javascript" src="js/map.js"></script>
+=======
+</script>   
+
+<!-- LOAD GRAPH -->
+	<script type="text/javascript" src="js/overview.js"></script>
+
+<!-- LOAD GOOGLE MAPS -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=AIzaSyDTzahCEc8Rvg1HnKAfsZ3jonSZFzRE1CY.exp"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+>>>>>>> master
 
 </body>
 </html>
