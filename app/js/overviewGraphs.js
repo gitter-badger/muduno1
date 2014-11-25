@@ -1,12 +1,11 @@
-var width = 900;
-var height = 300;
+var width = $("svg").parent().width();
+var height = 250;
 var Data = [];
 var maxNumberEngagements;
 var setSvgSize = d3.select(".chart")
 		.attr("width", width)
 		.attr("height", height);
-
-
+   
 // load data and draw graph
 function createDailyGraph() {
 		 d3.tsv("data/datamuduno2.tsv", function(data) {	
@@ -18,8 +17,14 @@ function createDailyGraph() {
 
 				setPath();
 				addXaxis();
-				addYaxis();		
-		});
+				addYaxis();
+                setSvgSize.append("text")
+                    .attr("class", "x label")
+                    .attr("text-anchor", "end")
+                    .attr("x", width/2)
+                    .attr("y", height)
+                    .text("Total user engagements per day"); 	
+            		});
 };
 function createHourlyGraph() {
 		 d3.tsv("data/datamuduno2.tsv", function(data) {	
@@ -41,7 +46,6 @@ function setPath () {
 		.datum(Data)
 		.attr("class","line")
 		.attr("d", pathLine())
-		
 };
 
 function pathLine () {
@@ -76,11 +80,7 @@ function xAxis() {
 }
 
 
-
 // format and insert yAxis
-
-
-
 function addYaxis () {
 	return setSvgSize.selectAll("svg")
 			.data(Data)
