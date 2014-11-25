@@ -5,38 +5,33 @@
 <!-- META TAGS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-
     <title>Muduno</title>
 
-<!-- LINK CSS STYLESHEETS -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/daterangepicker-bs3.css" />
+<!-- STYLESHEETS -->
     <link rel="stylesheet" href="css/location.css">
     <link rel="stylesheet" href="css/main.css">
+    
+<!-- TWITTER BOOTSTRAP & JQUERY -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
 <!-- D3 SCRIPT TAG -->
     <script src="http://d3js.org/queue.v1.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
 
-<!-- BOWER COMPONENTS -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/js/dropdown.js"></script>
-
+<!-- ANGULAR -->
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-
-    <script src="http://d3js.org/queue.v1.min.js"></script>
-    
-
-<!-- LINK JAVASCRIPT FILES -->
+   
+<!-- DATERANGEPICKER -->
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker-bs3.css" />
+
+<!-- LINK JAVASCRIPT FILES -->
     <script src="js/controllers.js"></script>
     <script src="js/app.js"></script>
    
-
-
-    
 </head>
 <body>
 <div class="container-fluid" style="margin-top: 20px;">
@@ -89,12 +84,9 @@
                     </ul>
                 </li>
             </ul>
-
-            <div>{{ tab }}</div>
-
             
             <!-- Overview Panel -->
-            <div class="panel" ng-show="panel.isSelected(1)">
+            <div id="overwrapper"class="panel" ng-show="panel.isSelected(1)">
                 <div class="row">
                     <div class="col-md-4 col-md-offset-8">
                         <div class="btn-group" role="group">
@@ -141,17 +133,29 @@
             
             <!-- Location Panel -->
             <div class="panel" ng-show="panel.isSelected(2)" ng-controller="DataTableCtrl as location"> 
-                <div class="col-md-4">
-                    <div class="accordion__container"></div>   
+
+                <div class="panel-group col-md-4" id="accordion" role="tablist" aria-multiselectable="true">
                     
-                    <div class="accordion__tab-title"ng-controller="AccordionCtrl" ng-repeat="location in locations | limitTo: 6"ng-click="openTab('tab one')"><h5 class="locationTitle">{{location.location}}<div class="triangle"><span class="glyphicon glyphicon-play"></span></div></h5> 
-   
-                            <div class="accordion__tab-content" ng-show="isOpenTab('tab one')"> 
-           
-                                <h2 id="tableHeader">Overview</h2>
-                                 <div ng-class="{'loc1' : $index == 0, 'loc2' : $index == 1, 'loc3' : $index == 2, 'loc4' : $index == 3, 'loc5' : $index == 4, 'loc6' : $index == 5}" >
-                                <table class="locationData">                              
-                             
+                    <!-- Repeat from here -->
+                    <div class="accordion__tab-title" ng-repeat="location in locations | limitTo: 6">
+
+                        <!-- Clickable Heading -->
+                        <div class="accordion-heading" role="tab" id="heading{{location.locationID}}">
+                            <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{location.locationID}}" href="#collapse{{location.locationID}}">
+                                <h5 class="locationTitle">{{location.location}}
+                                    <div class="triangle">
+                                        <span class="glyphicon glyphicon-play"></span>
+                                    </div>
+                                </h5> 
+                            </a>
+                        </div>
+                        <!-- Collapsible Section -->
+                        <div id="collapse{{location.locationID}}" class="collapse accordion__tab-content" role="tabpanel" aria-labelledby="heading{{location.locationID}}"> 
+
+                            <h2 id="tableHeader">Overview</h2>
+
+                            <div ng-class="{'loc1' : $index == 0, 'loc2' : $index == 1, 'loc3' : $index == 2, 'loc4' : $index == 3, 'loc5' : $index == 4, 'loc6' : $index == 5}" >
+                                <table class="locationData">
                                     <tr>
                                         <td>Engagements</td>
                                         <td>{{location.engagements}}</td>
@@ -173,13 +177,16 @@
                                         <td>{{location.rewardType}}</td>
                                     </tr>
                                 </table>
-                                </div>
                             </div>
+                        </div>
                     </div>
+
                 </div>
+
                 <div class ="col-md-6 col-md-offset-1">
 					<div id="map-canvas"></div>
 				</div>
+
             </div>
 
             
