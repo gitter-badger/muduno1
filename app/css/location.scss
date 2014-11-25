@@ -4,6 +4,7 @@ $location3: #ffbbba;
 $location4: #e3e3e3;
 $location5: #D4CCFF;
 $location6: #cef2cb;
+$tableText: #95999C;
 
 /*general styling for all location data panels*/
 .locationData {
@@ -14,14 +15,14 @@ $location6: #cef2cb;
 
     tr:nth-child(even) {
         background-color: #F2F2F2;
-        color: #95999C;
+        color: $tableText;
         height: 40px;
         border: 1px solid white;
         border-width: 1px;
     }
 
     tr:nth-child(odd) {
-        color: #95999C;
+        color: $tableText;
         height: 40px;
         border: 1px solid white;
         border-width: 1px;
@@ -38,28 +39,28 @@ $location6: #cef2cb;
 }
 
 .loc1 {
-    background-color: #DBEDF4;
-    color: #95999C;
+    background-color: $location1;
+    color: $tableText;
 }
 .loc2{ 
-      background-color: #FFDFC4;
-    color: #95999C;
+      background-color: $location2;
+    color: $tableText;
 }
 .loc3{ 
-      background-color: #ffbbba;
-    color: #95999C;
+      background-color: $location3;
+    color: $tableText;
 }
 .loc4{ 
-      background-color: #e3e3e3;
-    color: #95999C;
+      background-color: $location4;
+    color: $tableText;
 }
 .loc5{ 
-      background-color: #D4CCFF;
-    color: #95999C;
+      background-color: $location5;
+    color: $tableText;
 }
 .loc6{ 
-      background-color: #cef2cb;
-    color: #95999C;
+      background-color: $location6;
+    color: $tableText;
 }
 
 /* All accordion content */
@@ -111,6 +112,7 @@ $location6: #cef2cb;
     color: white;
     opacity: 0.3;
     padding-right: 20px;
+    padding-top: 22px;
 
 }
 
