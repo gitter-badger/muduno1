@@ -16,12 +16,13 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
+<!-- ANGULAR -->
+    <script src="bower_components/angular/angular.js"></script>
+
 <!-- D3 SCRIPT TAG -->
     <script src="http://d3js.org/queue.v1.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
-
-<!-- ANGULAR -->
-    <script src="bower_components/angular/angular.js"></script>
+ 
    
 <!-- DATERANGEPICKER -->
     <script type="text/javascript" src="js/moment.min.js"></script>
@@ -93,13 +94,10 @@
             <!-- Location Panel -->
             <div class="panel" ng-show="panel.isSelected(2)" ng-controller="DataTableCtrl as location"> 
                 <accordion></accordion>
-
                 <div class ="col-md-6 col-md-offset-1">
 					<div id="map-canvas"></div>
 				</div>
-
             </div>
-
             
             <!-- Engagement Panel -->
             <div class="panel" ng-show="panel.isSelected(3)">
@@ -147,8 +145,8 @@ $(document).ready(function() {
     );
 });
 
-</script>   
-<script type="text/javascript" src="js/overview.js"></script>
+</script>
+
 <script src="https://maps.googleapis.com/maps/api/js?v=AIzaSyDTzahCEc8Rvg1HnKAfsZ3jonSZFzRE1CY.exp"></script>
 <script type="text/javascript" src="js/map.js"></script>
 

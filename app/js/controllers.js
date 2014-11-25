@@ -7,6 +7,13 @@ mudunoApp.directive('overview', function() {
     };
 });
 
+mudunoApp.directive('accordion', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'inc/accordion.html'
+    }
+});
+
 
 
 
