@@ -1,5 +1,21 @@
 var mudunoApp = angular.module('mudunoApp', []);
 
+mudunoApp.directive('overview', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'inc/overview.html'
+    };
+});
+
+mudunoApp.directive('accordion', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'inc/accordion.html'
+    }
+});
+
+
+
 
 
 mudunoApp.controller('PanelCtrl', function(){
