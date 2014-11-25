@@ -8,7 +8,7 @@ $tableText: #95999C;
 
 /*general styling for all location data panels*/
 .locationData {
-    width: 312px;
+    width: 100%;
     border: 1px solid white;
     border-width: 1px;
     padding: 10px;
@@ -90,11 +90,11 @@ $tableText: #95999C;
 }
 .accordion__tab-content {
     background: white;
-    width: 312px;
+    width: 100%;
 }
 
 #tableHeader {
-     width: 312px;     
+     width: 100%;     
      height: 40px;
      background-color: #F2F2F2;
      color: #95999C;
@@ -116,4 +116,15 @@ $tableText: #95999C;
 
 }
 
+#containermap {
+  height: 800px;
+  width: 800px;
+}
+
+#map-canvas {
+  height: 600px;
+  width: 600px;
+  margin: 0px;
+  padding: 0px
+}
 
