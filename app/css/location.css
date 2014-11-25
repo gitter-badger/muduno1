@@ -1,99 +1,132 @@
-
-/* All accordion content */
-.accordion__container {
-    background: white;
-    border: none;
-    padding: 2px;
-    margin-top: 30px;
-}
-.accordion__tab {
-    color: white;
-    border-bottom: 1px solid white;
-}
-
-.accordion__tab-title1  {background: #90ccde; padding: 5px; cursor: pointer;}
-.accordion__tab-title2  {background: #E66D00; padding: 5px; cursor: pointer;}
-.accordion__tab-title3  {background: #963933; padding: 5px; cursor: pointer;}
-.accordion__tab-title4  {background: #A6A6A6; padding: 5px; cursor: pointer;}
-.accordion__tab-title5  {background: #5F4A7C; padding: 5px; cursor: pointer;}
-.accordion__tab-title6  {background: #83c47f; padding: 5px; cursor: pointer;}
-
-.accordion__tab-content {
-    background: white;
-}
-
+/*general styling for all location data panels*/
 .locationData {
-     width: 302px;
-}
-
-#tableHeader {
-     width: 302px;     
-     height: 30px;
-     background-color: #F2F2F2;
-     color: #95999C;
-     text-align: center;
-     font-size: 15px;
-     border: 1px white;
-     padding-top: 7.5px;
-     margin-top: 3px;
-     margin-bottom: 3px;
-}
-
-table.locationData td {
-    border: 1px solid white;
-    border-width: 1px;
-    padding: 10px;
-}
-
-.tableGrey {
+  width: 100%;
+  border: 1px solid white;
+  border-width: 1px;
+  padding: 10px; }
+  .locationData tr:nth-child(even) {
     background-color: #F2F2F2;
     color: #95999C;
     height: 40px;
     border: 1px solid white;
+    border-width: 1px; }
+  .locationData tr:nth-child(odd) {
+    color: #95999C;
+    height: 40px;
+    border: 1px solid white;
+    border-width: 1px; }
+  .locationData td {
+    border: 1px solid white;
     border-width: 1px;
-}
+    padding-left: 5px; }
 
-/*Individual location colours - probably is a far better way of doing this...*/
+.loc1 {
+  background-color: #DBEDF4;
+  color: #95999C; }
 
-/*Location 1*/
-.tableL1 {
-    background-color: #DBEDF4;
-    color: #95999C;
-    height: 40px;
-    border: 1px white;
-}
-/*Location 2*/
-.tableL2 {
-    background-color: #FFDFC4;
-    color: #95999C;
-    height: 40px;
-    border: 1px white;
-}
-/*Location 3*/
-.tableL3 {
-    background-color: #ffbbba;
-    color: #95999C;
-    height: 40px;
-    border: 1px white;
-}
-/*Location 4*/
-.tableL4 {
-    background-color: #e3e3e3;
-    color: #95999C;
-    height: 40px;
-    border: 1px white;
-}
-/*Location 5*/
-.tableL5 {
-    background-color: #D4CCFF;
-    color: #95999C;
-    height: 40px;
-    border: 1px white;
-}
-/*Location 6*/
-.tableL6 {
-    background-color: #cef2cb;
-    color: #95999C;
-    height: 40px;
-    border: 1px white;
-}
+.loc2 {
+  background-color: #FFDFC4;
+  color: #95999C; }
+
+.loc3 {
+  background-color: #ffbbba;
+  color: #95999C; }
+
+.loc4 {
+  background-color: #e3e3e3;
+  color: #95999C; }
+
+.loc5 {
+  background-color: #D4CCFF;
+  color: #95999C; }
+
+.loc6 {
+  background-color: #cef2cb;
+  color: #95999C; }
+
+/* All accordion content */
+.accordion__container {
+  margin-top: 30px; }
+
+.accordion__tab {
+  color: white;
+  border-bottom: 1px solid white; }
+
+.accordion__tab-title:nth-child(2) {
+  background: #90ccde;
+  padding-top: 5px;
+  margin-bottom: 2px;
+  cursor: pointer; }
+
+.accordion__tab-title:nth-child(3) {
+  background: #E66D00;
+  padding-top: 5px;
+  margin-bottom: 2px;
+  cursor: pointer; }
+
+.accordion__tab-title:nth-child(4) {
+  background: #963933;
+  padding-top: 5px;
+  margin-bottom: 2px;
+  cursor: pointer; }
+
+.accordion__tab-title:nth-child(5) {
+  background: #A6A6A6;
+  padding-top: 5px;
+  margin-bottom: 2px;
+  cursor: pointer; }
+
+.accordion__tab-title:nth-child(6) {
+  background: #5F4A7C;
+  padding-top: 5px;
+  margin-bottom: 2px;
+  cursor: pointer; }
+
+.accordion__tab-title:nth-child(7) {
+  background: #83c47f;
+  padding-top: 5px;
+  margin-bottom: 2px;
+  cursor: pointer; }
+
+.locationTitle {
+  height: 40px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 5px;
+  padding-top: 9px;
+  color: white; }
+
+.accordion__tab-content {
+  background: white;
+  width: 100%; }
+
+#tableHeader {
+  width: 100%;
+  height: 40px;
+  background-color: #F2F2F2;
+  color: #95999C;
+  text-align: center;
+  font-size: 15px;
+  border: 1px white;
+  padding-top: 7.5px;
+  margin-top: 5px; }
+
+.triangle {
+  float: right;
+  transform: rotate(90deg);
+  color: white;
+  opacity: 0.3;
+  padding-right: 20px;
+  padding-top: 22px; }
+
+#containermap {
+  height: 800px;
+  width: 800px; }
+
+#map-canvas {
+  height: 600px;
+  width: 600px;
+  margin: 0px;
+  padding: 0px; }
+
+/*# sourceMappingURL=location.css.map */
