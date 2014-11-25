@@ -1,5 +1,5 @@
-var width = 450;
-var height = 200;
+var width = 150;
+var height = 100;
 var Data = [];
 var maxNumberEngagements;
 var setSvgSize = d3.select(".chart")
@@ -7,7 +7,7 @@ var setSvgSize = d3.select(".chart")
 		.attr("height", height);
 
 // load data and draw graph
-d3.tsv("data/datamuduno.tsv", function(data) {	
+d3.tsv("data/datamuduno2.tsv", function(data) {	
 	// console.log(data)
 		 Data = d3.nest()
 		.key(function(d) { return d.date; })
