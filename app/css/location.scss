@@ -82,9 +82,10 @@ $tableText: #95999C;
 
 .locationTitle {
     height: 40px;
+    font-size: 16px;
     margin-top: 0px;
     margin-bottom: 0px;
-    padding-left: 5px;
+    padding-left: 1em;
     padding-top: 9px;
     color: white;
 }
@@ -117,14 +118,15 @@ $tableText: #95999C;
 }
 
 #containermap {
-  height: 800px;
+  height: 700px;
   width: 800px;
+  padding-top: 10px;
 }
 
 #map-canvas {
-  height: 600px;
+  height: 500px;
   width: 600px;
   margin: 0px;
-  padding: 0px
+  padding: 0px;
 }
 
