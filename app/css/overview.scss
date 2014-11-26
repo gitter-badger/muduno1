@@ -34,6 +34,12 @@ body {
                 stroke-width:3;
                 fill: none;
             }
+            path.yAxisLine {
+                stroke: black;
+                stroke-width: 1;
+                fill: none;
+                shape-rendering: crispEdges;
+            }
             // Axis data points
             .axis {
                 text {

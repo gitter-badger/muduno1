@@ -14,6 +14,11 @@ body {
     stroke: steelblue;
     stroke-width: 3;
     fill: none; }
+  .graph-wrapper .svg-wrapper svg.chart path.yAxisLine {
+    stroke: black;
+    stroke-width: 1;
+    fill: none;
+    shape-rendering: crispEdges; }
   .graph-wrapper .svg-wrapper svg.chart .axis text {
     font-size: 0.8em; }
     .graph-wrapper .svg-wrapper svg.chart .axis text path {
