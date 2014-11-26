@@ -6,6 +6,10 @@ $h3: 1.3125em;
 $h4: 1.125em;
 $h5: 1em;
 $small: 0.75em;
+$top1: #90ccde;
+$top2: #E66D00;
+$top3: #963933;
+
 body {
     font-size: 16px;
 }
@@ -16,7 +20,7 @@ body {
         .btn-group {
             .btn {
                 border-radius: 0;
-                border-color: $mainColor;
+                border-color: white;
                 padding: 2px 10px;
                 background-color: steelblue;
                 color: white;
@@ -53,6 +57,43 @@ body {
             }
         }
     }
-
+}
+.stats-wrapper {
+    div {
+        h4 {
+            font-size: $h4;
+        }
+        div {
+            background-color: #ddd;
+            p {
+                font-size: $h1/1.5;
+                margin: 5px 0;
+            }
+        }
+        .toploc-wrapper {
+            background-color: initial;
+            padding: 0;
+            p {
+                font-size: $small;
+                color: white;
+                margin: 0;
+                padding: 5px 10px;
+                &:nth-child(1) {
+                    background-color: $top1
+                }
+                &:nth-child(2) {
+                    background-color: $top2
+                }
+                &:nth-child(3) {
+                    background-color: $top3
+                }
+            }
+        }
+    }
+}
+#pie-wrapper {
+    img.pie {
+        width: 80%;
+    }
 }
 
