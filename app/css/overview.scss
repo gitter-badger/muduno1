@@ -1,0 +1,46 @@
+$lato:'Lato', sans-serif;
+$mainColor: #90ccde;
+$h1: 4.25em;
+$h2: 1.5em;
+$h3: 1.3125em;
+$h4: 1.125em;
+$h5: 1em;
+$small: 0.75em;
+body {
+    font-size: 16px;
+}
+// Overview Panel
+
+.graph-wrapper {
+    .btn-wrapper {
+        .btn-group {
+            .btn {
+                border-radius: 0;
+            }
+        }
+    }
+    .svg-wrapper {
+        // D3 Map
+        svg.chart {
+            // Plotted line
+            .line {
+                stroke: steelblue;
+                stroke-width:3;
+                fill: none;
+            }
+            // Axis data points
+            .axis {
+                text {
+                    font-size: 0.8em;
+                    path {
+                        fill: none;
+                        stroke: #000;
+                        shape-rendering: crispEdges;
+                    }
+                }
+            }
+        }
+    }
+
+}
+

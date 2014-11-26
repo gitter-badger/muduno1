@@ -1,0 +1,17 @@
+body {
+  font-size: 16px; }
+
+.graph-wrapper .btn-wrapper .btn-group .btn {
+  border-radius: 0; }
+.graph-wrapper .svg-wrapper svg.chart .line {
+  stroke: steelblue;
+  stroke-width: 3;
+  fill: none; }
+.graph-wrapper .svg-wrapper svg.chart .axis text {
+  font-size: 0.8em; }
+  .graph-wrapper .svg-wrapper svg.chart .axis text path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges; }
+
+/*# sourceMappingURL=overview.css.map */
