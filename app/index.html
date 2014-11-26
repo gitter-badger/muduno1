@@ -68,7 +68,7 @@
                     <a href="" ng-click="panel.selectTab(5)">Contact</a>
                 </li>
                 <li role="presentation" class="dropdown">
-                    <a class="dropdown-toggle" href="" data-toggle="dropdown">Alerts <b class="glyphicon glyphicon-exclamation-sign"></b></a>
+                    <a class="dropdown-toggle" href="" data-toggle="dropdown">Alerts <b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Campaign ends soon!</a></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">High Volume in King's Cross</a></li>
@@ -98,11 +98,6 @@
                                 </h5> 
                             </a>
                         </div>
-                        <script type="text/javascript">
-                            $(".press").on("click", function(){
-                                $("#map-canvas").empty();
-                            });
-                        </script>
                         <!-- Collapsible Section -->
                         <div id="collapse{{location.locationID}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{location.locationID}}">
                             <h2 class="tableHeader">Overview</h2>
