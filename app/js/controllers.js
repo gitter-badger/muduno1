@@ -14,6 +14,14 @@ mudunoApp.directive('accordion', function() {
     }
 });
 
+mudunoApp.directive('kingscross', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'inc/kingsCrossLocation.html'
+    }
+});
+
+
 
 mudunoApp.controller('PanelCtrl', function(){
     this.tab = 1;

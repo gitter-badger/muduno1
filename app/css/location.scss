@@ -33,30 +33,37 @@ $tableText: #95999C;
         border-width: 1px;
         padding-left: 5px;
         }
+
 }
 
 .loc1 {
     background-color: $location1;
     color: $tableText;
+
+    p {
+       border: 1px solid white;
+        border-width: 1px;
+        padding-left: 5px;
+    }
 }
 .loc2{ 
-      background-color: $location2;
+    background-color: $location2;
     color: $tableText;
 }
 .loc3{ 
-      background-color: $location3;
+    background-color: $location3;
     color: $tableText;
 }
 .loc4{ 
-      background-color: $location4;
+    background-color: $location4;
     color: $tableText;
 }
 .loc5{ 
-      background-color: $location5;
+    background-color: $location5;
     color: $tableText;
 }
 .loc6{ 
-      background-color: $location6;
+    background-color: $location6;
     color: $tableText;
 }
 
@@ -120,7 +127,7 @@ $tableText: #95999C;
   padding-top: 10px;
 }
 
-#map-canvas {
+.map-canvas {
   height: 500px;
   width: 600px;
   margin: 0px;
