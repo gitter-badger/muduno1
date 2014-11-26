@@ -1,11 +1,11 @@
 <div class="panel-group col-md-4" id="accordion" role="tablist" aria-multiselectable="true">
-    
-    <!-- Repeat from here -->
-    <div class="accordion__tab-title" ng-repeat="location in locations | limitTo: 6">
 
+    <!-- Repeat from here -->
+    <div class="panel panel-default accordion__tab-title" ng-repeat="location in locations | limitTo: 6">
+        
         <!-- Clickable Heading -->
-        <div class="accordion-heading" role="tab" id="heading{{location.locationID}}">
-            <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{location.locationID}}" href="#collapse{{location.locationID}}">
+        <div class="accordion-heading panel-heading" role="tab" id="heading{{location.locationID}}">
+            <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{location.locationID}}" >
                 <h5 class="locationTitle">{{location.location}}
                     <div class="triangle">
                         <span class="glyphicon glyphicon-play"></span>
@@ -14,9 +14,8 @@
             </a>
         </div>
         <!-- Collapsible Section -->
-        <div id="collapse{{location.locationID}}" class="collapse accordion__tab-content" role="tabpanel" aria-labelledby="heading{{location.locationID}}"> 
-
-            <h2 id="tableHeader">Overview</h2>
+        <div id="collapse{{location.locationID}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{location.locationID}}">
+            <h2 class="tableHeader">Overview</h2>
 
             <div ng-class="{'loc1' : $index == 0, 'loc2' : $index == 1, 'loc3' : $index == 2, 'loc4' : $index == 3, 'loc5' : $index == 4, 'loc6' : $index == 5}" >
                 <table class="locationData">
@@ -44,7 +43,6 @@
             </div>
         </div>
 
-        
     </div>
-
 </div>
+

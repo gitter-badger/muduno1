@@ -1,9 +1,11 @@
 var width = $("svg").parent().width();
+
 var margin = {
 	general: 100,
 	left: 50,
 	bottom: 40
 }
+
 var height = 250;
 var Data = [];
 var maxNumberEngagements;

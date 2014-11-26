@@ -1,15 +1,20 @@
 body {
   font-size: 16px; }
-
-.container-fluid {
-  height: 100vh; }
+  body .container-fluid {
+    background-color: #90ccde; }
+    body .container-fluid .row .main-wrapper {
+      background-color: #fff;
+      border-left: 6px #bbb solid;
+      border-right: 6px #bbb solid;
+      min-height: 100vh;
+      max-height: 100vh; }
 
 .header {
-  margin-top: 10px;
-  margin-bottom: 15px; }
-  .header .col-md-7 img {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+  .header .titles img {
     vertical-align: top; }
-  .header .col-md-7 h1 {
+  .header .titles h1 {
     display: inline-block;
     font-size: 4.25em;
     color: #90ccde;
@@ -23,6 +28,8 @@ body {
       background-color: #90ccde; }
     .header .datepicker-wrapper form.form-horizontal fieldset input.form-control {
       border-radius: 0; }
+  .header .datepicker-wrapper #reservation {
+    width: 100%; }
 
 ul.nav-tabs li, ul.nav-tabs li.active {
   font-size: 1em; }
@@ -34,6 +41,54 @@ ul.nav-tabs li a {
 div.panel {
   border: none;
   -webkit-box-shadow: none;
-  box-shadow: none; }
+  box-shadow: none;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  div.panel img.wire-frame {
+    margin: auto; }
+  div.panel #engagement {
+    height: 515px; }
+
+.kingsx h5 {
+  background-color: #90ccde;
+  color: white;
+  padding: 0.5em; }
+
+.kingxNav {
+  background-color: #90ccde;
+  width: 100%;
+  padding: 1em; }
+
+.kingsxNav li {
+  display: inline;
+  padding: 0.5em;
+  font-size: 1em; }
+
+.kingsxNav ul {
+  background-color: #90ccde; }
+
+.kingsxNav a {
+  color: white; }
+
+.piechart {
+  height: 100%;
+  width: 100%;
+  margin-left: 4em; }
+
+.adfiller {
+  height: 9.8em;
+  width: 100%;
+  padding: 0px; }
+
+.graphFiller {
+  height: 100%;
+  width: 100%;
+  padding: 0px; }
+
+.notes {
+  width: 100%;
+  height: 8em;
+  padding-top: 20px;
+  padding-bottom: 20px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -12,7 +12,6 @@ body {
 // Overview Panel
 
 .graph-wrapper {
-    padding-top: 10px;
     .btn-wrapper {
         .btn-group {
             .btn {
@@ -25,6 +24,8 @@ body {
         }
     }
     .svg-wrapper {
+        padding-left: 0;
+        padding-right: 0;
         // D3 Map
         svg.chart {
             // Plotted line

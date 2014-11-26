@@ -55,6 +55,7 @@
 	google.maps.event.addListener(markerKingsCross, 'click', function() {
 		map.setZoom(15);
 		map.setCenter(markerKingsCross.getPosition());
+		//$(."collapse").collapse();
 	});
 
 	google.maps.event.addListener(markerCoventGarden, 'click', function() {
@@ -88,9 +89,67 @@
 	});
 
 //------------- When locationtab is clicked, map is resized and centered ---
-	$(document).ready(function() {
-		$('.locationstab').click(function() {
-			google.maps.event.trigger(map, 'resize'); 
-			map.panTo(marker.getPosition()); 
-		});
- 	});
+    $(document).ready(function() {
+        $('.locationstab').click(function() {
+            google.maps.event.trigger(map, 'resize'); 
+            console.log("You have clicked the locationstab");
+            map.panTo(marker.getPosition()); 
+            map.setZoom(13);
+        });
+        $('.headloc1').click(function() {
+            console.log("bello,world do I exist thoug?"); 
+            google.maps.event.trigger(map, 'resize'); 
+            map.panTo(markerKingsCross.getPosition());
+            map.setZoom(15);
+        });
+        $('.headloc2').click(function() {
+            console.log("bello,world do I exist thoug?"); 
+            google.maps.event.trigger(map, 'resize'); 
+            map.panTo(markerCoventGarden.getPosition());
+            map.setZoom(15);
+        });
+        $('.headloc3').click(function() {
+            console.log("bello,world do I exist thoug?"); 
+            google.maps.event.trigger(map, 'resize'); 
+            map.panTo(markerEmbankment.getPosition());
+            map.setZoom(15);
+        });
+        $('.headloc4').click(function() {
+            console.log("bello,world do I exist thoug?"); 
+            google.maps.event.trigger(map, 'resize'); 
+            map.panTo(markerBarbican.getPosition());
+            map.setZoom(15);
+        });
+        $('.headloc5').click(function() {
+            console.log("bello,world do I exist thoug?"); 
+            google.maps.event.trigger(map, 'resize'); 
+            map.panTo(markerLiverpoolStreet.getPosition());
+            map.setZoom(15);
+        });
+        $('.headloc6').click(function() {
+            console.log("bello,world do I exist thoug?"); 
+            google.maps.event.trigger(map, 'resize'); 
+            map.panTo(markerOxfordCircus.getPosition());
+            map.setZoom(15);
+        });
+    });
+
+
+
+ 	// $(document).ready(function() {
+  //       $('.headloc1').click(function() {
+  //           console.log("bello,world do I exist thoug?"); 
+  //           google.maps.event.trigger(map, 'resize'); 
+  //           map.panTo(markerKingsCross.getPosition());
+  //           map.setZoom(15);
+  //       });
+  //   });
+
+ 	// $(document).ready(function() {
+  //       $('.headloc2').click(function() {
+  //           console.log("bello, world do I exist though?") 
+  //           google.maps.event.trigger(map, 'resize'); 
+  //           map.panTo(markerKingsCross.getPosition());
+  //           map.setZoom(15);
+  //       });
+  //   });
