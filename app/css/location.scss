@@ -1,3 +1,11 @@
+$lato:'Lato', sans-serif;
+$mainColor: #90ccde;
+$h1: 4.25em;
+$h2: 1.5em;
+$h3: 1.3125em;
+$h4: 1.125em;
+$h5: 1em;
+$small: 0.75em;
 $location1: #DBEDF4;
 $location2: #FFDFC4;
 $location3: #ffbbba;
@@ -6,33 +14,68 @@ $location5: #D4CCFF;
 $location6: #cef2cb;
 $tableText: #95999C;
 
+// Removing Generic Bootstrap look
+#location-wrapper {
+    .panel-group {
+        margin-bottom: 0;
+        .panel {
+            border-radius: 0;
+            margin-top: 0;
+            .panel-heading {
+                padding: 0;
+                background-color: initial;
+            }
+            .panel-collapse {
+                min-width: 100%;
+                h2 {
+                    margin: 0;
+                }
+            }
+        }
+        .panel+.panel {
+            margin-top: 0;
+        }
+    }
+}
+
 /*general styling for all location data panels*/
+.tableHeader {
+    background-color: #F2F2F2;
+    color: #95999C;
+    text-align: center;
+    font-size: $h5;
+    border: 1px white;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    margin-top: 5px;
+}
+
 .locationData {
     width: 100%;
     border: 1px solid white;
-    border-width: 1px;
-    padding: 10px;
-
-    tr:nth-child(even) {
-        background-color: #F2F2F2;
-        color: $tableText;
-        height: 40px;
-        border: 1px solid white;
-        border-width: 1px;
-    }
-
-    tr:nth-child(odd) {
-        color: $tableText;
-        height: 40px;
-        border: 1px solid white;
-        border-width: 1px;
-
-    }
-    td {
-        border: 1px solid white;
-        border-width: 1px;
-        padding-left: 5px;
+    tbody {
+        
+        tr:nth-child(even) {
+            background-color: #F2F2F2;
+            color: $tableText;
+            border: 1px solid white;
+            border-width: 1px;
         }
+        tr:nth-child(odd) {
+            color: $tableText;
+            border: 1px solid white;
+            border-width: 1px;
+        }
+        tr {
+            height: 30px;
+            td {
+                border: 1px solid white;
+                border-width: 1px;
+                padding-left: 5px;
+                font-size: $small
+            }
+        }
+    }
 
 }
 
@@ -86,7 +129,7 @@ $tableText: #95999C;
 
 .locationTitle {
     height: 40px;
-    font-size: 16px;
+    font-size: $h5;
     margin-top: 0px;
     margin-bottom: 0px;
     padding-left: 1em;
@@ -98,20 +141,7 @@ $tableText: #95999C;
     width: 100%;
 }
 
-#tableHeader {
-     width: 100%;     
-     height: 40px;
-     background-color: #F2F2F2;
-     color: #95999C;
-     text-align: center;
-     font-size: 15px;
-     border: 1px white;
-     padding-top: 7.5px;
-     margin-top: 5px;
-}
-
 .triangle {
-
     float: right;
     transform: rotate(90deg);
     color: white;
@@ -121,16 +151,11 @@ $tableText: #95999C;
 
 }
 
-#containermap {
-  height: 700px;
-  width: 800px;
-  padding-top: 10px;
-}
-
-.map-canvas {
-  height: 500px;
-  width: 600px;
-  margin: 0px;
-  padding: 0px;
+// Google Map
+#map-canvas {
+    height: 500px;
+    width: 100%;;
+    margin: 0px;
+    padding: 0px;
 }
 

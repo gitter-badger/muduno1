@@ -1,4 +1,4 @@
-var width = $("svg").parent().width() - 200;
+var width = $("svg").parent().width();
 var margin = 100
 var height = 250;
 var Data = [];
