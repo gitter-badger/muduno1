@@ -11,6 +11,9 @@ body {
 	font-size: 16px;
 }
 
+.container-fluid {
+	height: 100vh;
+}
 
 .header {
 	margin-top: 10px;
@@ -65,31 +68,5 @@ div.panel {
 	box-shadow: none;
 }
 
-// Overview Panel
-	// D3 Map
-	svg.chart {
-		// Plotted line
-		.line {
-		 	stroke: steelblue;
-		 	stroke-width:3;
-		 	fill: none;
-		}
-		// Axis data points
-		.axis {
-			text {
-				font-size: 0.8em;
-				path {
-					fill: none;
-					stroke: #000;
-					shape-rendering: crispEdges;
-				}
-			}
-		}
-		// y-axis line
-		.y.axisline {
-			stroke: $mainColor;
-			stroke-width:2;
-			fill: none;
-		}
-	}
+
 	

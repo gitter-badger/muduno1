@@ -1,6 +1,9 @@
 body {
   font-size: 16px; }
 
+.container-fluid {
+  height: 100vh; }
+
 .header {
   margin-top: 10px;
   margin-bottom: 15px; }
@@ -32,20 +35,5 @@ div.panel {
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none; }
-
-svg.chart .line {
-  stroke: steelblue;
-  stroke-width: 3;
-  fill: none; }
-svg.chart .axis text {
-  font-size: 0.8em; }
-  svg.chart .axis text path {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges; }
-svg.chart .y.axisline {
-  stroke: #90ccde;
-  stroke-width: 2;
-  fill: none; }
 
 /*# sourceMappingURL=main.css.map */
