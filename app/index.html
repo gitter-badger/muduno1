@@ -91,7 +91,7 @@
                         <!-- Clickable Heading -->
                         <div class="accordion-heading panel-heading" role="tab" id="heading{{location.locationID}}">
                             <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{location.locationID}}" >
-                                <h5 class="locationTitle">{{location.location}}
+                                <h5 ng-class="{'headloc1' : $index == 0, 'headloc2' : $index == 1, 'headloc3' : $index == 2, 'headloc4' : $index == 3, 'headloc5' : $index == 4, 'headloc6' : $index == 5}" class="locationTitle">{{location.location}}
                                     <div class="triangle">
                                         <span class="glyphicon glyphicon-play"></span>
                                     </div>
@@ -125,6 +125,8 @@
                                         <td>{{location.rewardType}}</td>
                                     </tr>
                                 </table>
+                                <h5 class="accordionTabsHeader">More Detail</h5>
+                                <h5 class="accordionTabsHeader">Export</h5>
                             </div>
                         </div>
 

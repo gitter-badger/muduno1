@@ -44,9 +44,21 @@
       padding-left: 5px;
       font-size: 0.75em; }
 
+.accordionTabsHeader {
+  text-align: center;
+  font-size: 1em;
+  border-bottom: solid 1px white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px; }
+
 .loc1 {
   background-color: #DBEDF4;
   color: #95999C; }
+  .loc1 p {
+    border: 1px solid white;
+    border-width: 1px;
+    padding-left: 5px; }
 
 .loc2 {
   background-color: #FFDFC4;
