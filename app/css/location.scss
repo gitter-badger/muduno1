@@ -76,11 +76,18 @@ $tableText: #95999C;
             }
         }
     }
+
 }
 
 .loc1 {
     background-color: $location1;
     color: $tableText;
+
+    p {
+       border: 1px solid white;
+        border-width: 1px;
+        padding-left: 5px;
+    }
 }
 .loc2{ 
     background-color: $location2;
@@ -143,13 +150,8 @@ $tableText: #95999C;
     padding-top: 22px;
 
 }
-// Google Map
 
-// #containermap {
-//     height: 700px;
-//     width: 800px;
-//     padding-top: 10px;
-// }
+// Google Map
 #map-canvas {
     height: 500px;
     width: 100%;;

@@ -7,12 +7,20 @@ mudunoApp.directive('overview', function() {
     };
 });
 
-mudunoApp.directive('accordion', function() {
+// mudunoApp.directive('accordion', function() {
+//     return {
+//         restrict: 'E',
+//         templateUrl: 'inc/bs-accordion.html'
+//     }
+// });
+
+mudunoApp.directive('kingscross', function() {
     return {
         restrict: 'E',
-        templateUrl: 'inc/bs-accordion.html'
+        templateUrl: 'inc/kingsCrossLocation.html'
     }
 });
+
 
 
 mudunoApp.controller('PanelCtrl', function(){
