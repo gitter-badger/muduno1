@@ -79,6 +79,15 @@ $tableText: #95999C;
 
 }
 
+.accordionTabsHeader {
+    text-align: center;
+    font-size: $h5;
+    border-bottom: solid 1px white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+}
+
 .loc1 {
     background-color: $location1;
     color: $tableText;
