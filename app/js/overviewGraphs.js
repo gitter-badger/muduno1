@@ -1,12 +1,12 @@
-var width = 900;
-var height = 300;
+var width = $("svg").parent().width() - 200;
+var margin = 100
+var height = 250;
 var Data = [];
 var maxNumberEngagements;
 var setSvgSize = d3.select(".chart")
 		.attr("width", width)
 		.attr("height", height);
-
-
+   
 // load data and draw graph
 function createDailyGraph() {
 		 d3.tsv("data/datamuduno2.tsv", function(data) {	
@@ -18,8 +18,8 @@ function createDailyGraph() {
 
 				setPath();
 				addXaxis();
-				addYaxis();		
-		});
+				addYaxis();
+        });
 };
 function createHourlyGraph() {
 		 d3.tsv("data/datamuduno2.tsv", function(data) {	
@@ -31,7 +31,7 @@ function createHourlyGraph() {
 
 				setPath();
 				addXaxis();
-				addYaxis();		
+				addYaxis();	
 		});
 };
 
@@ -41,12 +41,11 @@ function setPath () {
 		.datum(Data)
 		.attr("class","line")
 		.attr("d", pathLine())
-		
 };
 
 function pathLine () {
 		return d3.svg.line()
-			.x(function(d,i){return ((width - 100) / (Data.length -1)) * (i+ 2);})
+			.x(function(d,i){return ((((width - margin) / (Data.length - 1)) * i) + 50 );})
 			.y(function(d){return scaleY()(d.values.length);})
 };		
  		
@@ -57,15 +56,15 @@ function scaleY () {
 };
 
 // format and insert xAxis
-function addXaxis () {
+function addXaxis (d) {
 	return setSvgSize.selectAll("svg")
 			.data(Data)
 			.enter().append("g")
 			.attr("class", "axis")
-      		.attr("transform", function(d,i){return "translate(" + (((width - 100) / (Data.length - 1)) * (i+2)) + ","+ (height - 20 ) +")";})
+      		.attr("transform", function(d,i){return "translate(" + ((((width - margin) / (Data.length - 1)) * i) + 50 )+ ","+ (height - 10 ) +")";})
       		.append("text")
       		.attr("dy", ".71em")
-      		.style("text-anchor", "end")
+      		.style("text-anchor", "start")
       		.text(function(d){return d.key})
       		.call(xAxis());
 };
@@ -75,22 +74,20 @@ function xAxis() {
 		.orient("bottom");
 }
 
-
-
-// format and insert yAxis
-
-
-
 function addYaxis () {
-	return setSvgSize.selectAll("svg")
-			.data(Data)
-			.enter().append("g")
+	var i;
+	for (i = 0; i < 7; i++){
+		setYPoint(i);
+	};
+};
+function setYPoint (position){
+	return setSvgSize.append("g")
 			.attr("class", "axis")
-      		.attr("transform", function(d,i){return "translate(50," + ((height / (Data.length - 1)) * i) +")";})
+      		.attr("transform", "translate(50," + ((height / 7) * position) +")")
       		.append("text")
       		.attr("dy", ".71em")
       		.style("text-anchor", "end")
-      		.text(function(d,i){return maxNumberEngagements - Math.round((maxNumberEngagements/(Data.length - 2))* i)})
+      		.text(maxNumberEngagements - Math.round((maxNumberEngagements/7)*position))
       		.call(yAxis());
 };
 

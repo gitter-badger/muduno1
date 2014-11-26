@@ -8,30 +8,33 @@
     <title>Muduno</title>
 
 <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="css/location.css">
-    <link rel="stylesheet" href="css/main.css">
     <!-- Google-fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Daterangepicker -->
     <link rel="stylesheet" type="text/css" href="css/daterangepicker-bs3.css" />
+    <!-- Muduno styles -->
+    <link rel="stylesheet" href="css/location.css">
+    <link rel="stylesheet" href="css/overview.css">
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
-<div class="container-fluid" style="margin-top: 20px;">
+<div class="container-fluid">
     <div class="row header">
 
         <div class="col-md-7 col-md-offset-1">
-            <h1><img src="img/mudunologo.png">muduno</h1>
+            <img src="img/mudunologo.png">
+            <h1>muduno</h1>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-3 datepicker-wrapper">
             <form class="form-horizontal">
                 <fieldset>
                     <div class="control-group">
                         <div class="controls">
                             <div class="input-prepend input-group">
-                                <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span><input type="text" style="width: 200px" name="reservation" id="reservation" class="form-control" value="01/11/2014 - 31/12/2014" /> 
+                                <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span><input type="text" style="width: 200px" name="reservation" id="reservation" class="form-control" value="01/10/2014 - 09/10/2014" /> 
                             </div>
                         </div>
                     </div>
@@ -71,13 +74,61 @@
             </ul>
             
             <!-- Overview Panel -->
-            <div id="overwrapper"class="panel" ng-show="panel.isSelected(1)">
+            <div id="overwrapper" class="panel" ng-show="panel.isSelected(1)">
                 <overview></overview>
             </div>
             
             <!-- Location Panel -->
             <div class="panel" ng-show="panel.isSelected(2)" ng-controller="DataTableCtrl as location"> 
-                <accordion></accordion>
+                
+                <div class="panel-group col-md-4" id="accordion" role="tablist" aria-multiselectable="true">
+                    
+                    <!-- Repeat from here -->
+                    <div class="accordion__tab-title" ng-repeat="location in locations | limitTo: 6">
+
+                        <!-- Clickable Heading -->
+                        <div class="accordion-heading" role="tab" id="heading{{location.locationID}}">
+                            <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{location.locationID}}" href="#collapse{{location.locationID}}">
+                                <h5 ng-class="{'headloc1' : $index == 0, 'headloc2' : $index == 1, 'headloc3' : $index == 2, 'headloc4' : $index == 3, 'headloc5' : $index == 4, 'headloc6' : $index == 5}" class="locationTitle">{{location.location}}
+                                    <div class="triangle">
+                                        <span class="glyphicon glyphicon-play"></span>
+                                    </div>
+                                </h5> 
+                            </a>
+                        </div>
+                        <!-- Collapsible Section -->
+                        <div id="collapse{{location.locationID}}" class="collapse accordion__tab-content" role="tabpanel" aria-labelledby="heading{{location.locationID}}"> 
+
+                            <h2 id="tableHeader">Overview</h2>
+
+                            <div ng-class="{'loc1' : $index == 0, 'loc2' : $index == 1, 'loc3' : $index == 2, 'loc4' : $index == 3, 'loc5' : $index == 4, 'loc6' : $index == 5}" >
+                                <table class="locationData">
+                                    <tr>
+                                        <td>Engagements</td>
+                                        <td>{{location.engagements}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Social Shares</td>
+                                        <td>{{location.socialShares}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Claims</td>
+                                        <td>{{location.claims}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rewards Left</td>
+                                        <td>{{location.rewardsLeft}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Reward Type</td>
+                                        <td>{{location.rewardType}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+
                 <div class ="col-md-6 col-md-offset-1">
 					<div id="map-canvas"></div>
 				</div>
@@ -107,30 +158,30 @@
 <!-- TWITTER BOOTSTRAP & JQUERY -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#reservation').daterangepicker(
-        {
-            format: 'DD/MM/YYYY',
-            startDate: '01/11/2014',
-            endDate: '31/12/2014',
-            showDropdowns: true,
-            opens: 'left'
-        },
-        function(start, end) {
-            dates = {
-                startDay: start.format('DD'),
-                startMonth: start.format('MM'),
-                startYear: start.format('YYYY'),
-                endDay: end.format('DD'),
-                endMonth: end.format('MM'),
-                endYear: end.format('YYYY'),
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#reservation').daterangepicker(
+            {
+                format: 'DD/MM/YYYY',
+                startDate: '01/10/2014',
+                endDate: '09/10/2014',
+                showDropdowns: true,
+                opens: 'left'
+            },
+            function(start, end) {
+                dates = {
+                    startDay: start.format('DD'),
+                    startMonth: start.format('MM'),
+                    startYear: start.format('YYYY'),
+                    endDay: end.format('DD'),
+                    endMonth: end.format('MM'),
+                    endYear: end.format('YYYY'),
+                }
+                console.log(dates);
             }
-            console.log(dates);
-        }
-    );
-});
-</script>
+        );
+    });
+    </script>
 <!-- ANGULAR -->
     <script src="bower_components/angular/angular.js"></script>
 <!-- D3 SCRIPT TAG -->

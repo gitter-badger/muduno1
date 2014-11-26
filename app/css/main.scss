@@ -1,51 +1,71 @@
 $lato:'Lato', sans-serif;
-
+$mainColor: #90ccde;
+$h1: 4.25em;
+$h2: 1.5em;
+$h3: 1.3125em;
+$h4: 1.125em;
+$h5: 1em;
+$small: 0.75em;
 
 body {
-  font: 10px sans-serif;
-}
-
-.nav {
-	li {
-		font-size: 18px;
-	}
+	font-size: 16px;
 }
 
 .container-fluid {
-	.header {
-		.col-md-7 {
-			h1{
-				font-size: 45px;
-				color: #90ccde;
-				font-family: $lato; 
-			}
+	height: 100vh;
+}
+
+.header {
+	margin-top: 10px;
+	margin-bottom: 15px;
+	.col-md-7 {
+		img {
+			vertical-align: top;
+		}
+		h1{
+			display: inline-block;
+			font-size: $h1;
+			color: $mainColor;
+			font-family: $lato; 
+			margin: 0;
+			vertical-align: top;
 		}
 	}
-	.main-wrapper {
-		.col-md-10 {
-			.panel {
-				.row {
-					p {
-						font-size: 30px;
-					}
+	.datepicker-wrapper {
+		form.form-horizontal {
+			padding: 20px 0;
+			fieldset {
+				span.add-on {
+					border-radius: 0;
+					background-color: $mainColor;
+				}
+				input.form-control {
+					border-radius: 0;
 				}
 			}
 		}
 	}
 }
 
+// Main-wrapper styles start here
 
-.line {
- 	stroke: steelblue;
- 	stroke-width:2;
- 	fill: none;
+ul.nav-tabs {
+	li, li.active {
+		font-size: $h5;
+		a {
+			padding: 5px 25px;
+		}
+	}
+	li {
+		a {
+			color: #5D93A3;
+		}
+	}
 }
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
+div.panel {
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 .kingsx {
@@ -76,9 +96,6 @@ body {
 .kingsxNav a {
 	color: white;
 }
-
-
-	
 
 
 .piechart {
