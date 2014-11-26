@@ -9,13 +9,14 @@
 
 <!-- STYLESHEETS -->
     <!-- Google-fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Daterangepicker -->
     <link rel="stylesheet" type="text/css" href="css/daterangepicker-bs3.css" />
     <!-- Muduno styles -->
     <link rel="stylesheet" href="css/location.css">
+    <link rel="stylesheet" href="css/overview.css">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -108,30 +109,30 @@
 <!-- TWITTER BOOTSTRAP & JQUERY -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#reservation').daterangepicker(
-        {
-            format: 'DD/MM/YYYY',
-            startDate: '01/10/2014',
-            endDate: '09/10/2014',
-            showDropdowns: true,
-            opens: 'left'
-        },
-        function(start, end) {
-            dates = {
-                startDay: start.format('DD'),
-                startMonth: start.format('MM'),
-                startYear: start.format('YYYY'),
-                endDay: end.format('DD'),
-                endMonth: end.format('MM'),
-                endYear: end.format('YYYY'),
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#reservation').daterangepicker(
+            {
+                format: 'DD/MM/YYYY',
+                startDate: '01/10/2014',
+                endDate: '09/10/2014',
+                showDropdowns: true,
+                opens: 'left'
+            },
+            function(start, end) {
+                dates = {
+                    startDay: start.format('DD'),
+                    startMonth: start.format('MM'),
+                    startYear: start.format('YYYY'),
+                    endDay: end.format('DD'),
+                    endMonth: end.format('MM'),
+                    endYear: end.format('YYYY'),
+                }
+                console.log(dates);
             }
-            console.log(dates);
-        }
-    );
-});
-</script>
+        );
+    });
+    </script>
 <!-- ANGULAR -->
     <script src="bower_components/angular/angular.js"></script>
 <!-- D3 SCRIPT TAG -->
