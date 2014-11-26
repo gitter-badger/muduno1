@@ -88,9 +88,36 @@
 	});
 
 //------------- When locationtab is clicked, map is resized and centered ---
-	$(document).ready(function() {
-		$('.locationstab').click(function() {
-			google.maps.event.trigger(map, 'resize'); 
-			map.panTo(marker.getPosition()); 
-		});
- 	});
+    $(document).ready(function() {
+        $('.locationstab').click(function() {
+            google.maps.event.trigger(map, 'resize'); 
+            console.log("You have clicked the locationstab");
+            map.panTo(marker.getPosition()); 
+        });
+        $('.headloc1').click(function() {
+            console.log("bello,world do I exist thoug?"); 
+            google.maps.event.trigger(map, 'resize'); 
+            map.panTo(markerKingsCross.getPosition());
+            map.setZoom(15);
+        });
+    });
+
+
+
+ 	// $(document).ready(function() {
+  //       $('.headloc1').click(function() {
+  //           console.log("bello,world do I exist thoug?"); 
+  //           google.maps.event.trigger(map, 'resize'); 
+  //           map.panTo(markerKingsCross.getPosition());
+  //           map.setZoom(15);
+  //       });
+  //   });
+
+ 	// $(document).ready(function() {
+  //       $('.headloc2').click(function() {
+  //           console.log("bello, world do I exist though?") 
+  //           google.maps.event.trigger(map, 'resize'); 
+  //           map.panTo(markerKingsCross.getPosition());
+  //           map.setZoom(15);
+  //       });
+  //   });

@@ -20,6 +20,12 @@
     border-width: 1px;
     padding-left: 5px; }
 
+.headloc1 {
+  background-color: red; }
+
+.headloc2 {
+  background-color: yellow; }
+
 .loc1 {
   background-color: #DBEDF4;
   color: #95999C; }
