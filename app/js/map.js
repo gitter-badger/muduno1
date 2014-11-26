@@ -55,6 +55,7 @@
 	google.maps.event.addListener(markerKingsCross, 'click', function() {
 		map.setZoom(15);
 		map.setCenter(markerKingsCross.getPosition());
+		//$(."collapse").collapse();
 	});
 
 	google.maps.event.addListener(markerCoventGarden, 'click', function() {
