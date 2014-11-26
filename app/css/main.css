@@ -1,5 +1,13 @@
 body {
   font-size: 16px; }
+  body .container-fluid {
+    background-color: #90ccde; }
+    body .container-fluid .row .main-wrapper {
+      background-color: #fff;
+      border-left: 6px #bbb solid;
+      border-right: 6px #bbb solid;
+      min-height: 100vh;
+      max-height: 100vh; }
 
 .header {
   margin-top: 5px;
@@ -20,6 +28,8 @@ body {
       background-color: #90ccde; }
     .header .datepicker-wrapper form.form-horizontal fieldset input.form-control {
       border-radius: 0; }
+  .header .datepicker-wrapper #reservation {
+    width: 100%; }
 
 ul.nav-tabs li, ul.nav-tabs li.active {
   font-size: 1em; }

@@ -9,7 +9,18 @@ $small: 0.75em;
 
 body {
 	font-size: 16px;
-	
+	.container-fluid {
+		background-color: $mainColor;
+		.row {
+			.main-wrapper {
+				background-color: #fff;
+				border-left: 6px #bbb solid;
+				border-right: 6px #bbb solid;
+				min-height: 100vh;
+				max-height: 100vh;
+			}
+		}
+	}
 }
 
 
@@ -41,6 +52,9 @@ body {
 					border-radius: 0;
 				}
 			}
+		}
+		#reservation {
+			width: 100%;
 		}
 	}
 }
