@@ -1,14 +1,15 @@
 body {
   font-size: 16px; }
 
-.graph-wrapper {
-  padding-top: 10px; }
-  .graph-wrapper .btn-wrapper .btn-group .btn {
-    border-radius: 0;
-    border-color: #90ccde;
-    padding: 2px 10px;
-    background-color: steelblue;
-    color: white; }
+.graph-wrapper .btn-wrapper .btn-group .btn {
+  border-radius: 0;
+  border-color: #90ccde;
+  padding: 2px 10px;
+  background-color: steelblue;
+  color: white; }
+.graph-wrapper .svg-wrapper {
+  padding-left: 0;
+  padding-right: 0; }
   .graph-wrapper .svg-wrapper svg.chart .line {
     stroke: steelblue;
     stroke-width: 3;

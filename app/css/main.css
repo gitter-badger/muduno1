@@ -1,15 +1,12 @@
 body {
   font-size: 16px; }
 
-.container-fluid {
-  height: 100vh; }
-
 .header {
-  margin-top: 10px;
-  margin-bottom: 15px; }
-  .header .col-md-7 img {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+  .header .titles img {
     vertical-align: top; }
-  .header .col-md-7 h1 {
+  .header .titles h1 {
     display: inline-block;
     font-size: 4.25em;
     color: #90ccde;
@@ -34,6 +31,12 @@ ul.nav-tabs li a {
 div.panel {
   border: none;
   -webkit-box-shadow: none;
-  box-shadow: none; }
+  box-shadow: none;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  div.panel img.wire-frame {
+    margin: auto; }
+  div.panel #engagement {
+    height: 515px; }
 
 /*# sourceMappingURL=main.css.map */

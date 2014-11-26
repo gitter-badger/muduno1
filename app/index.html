@@ -22,13 +22,15 @@
 </head>
 <body>
 <div class="container-fluid">
+<div class="row">
+<div class="main-wrapper col-md-10 col-md-offset-1">
     <div class="row header">
 
-        <div class="col-md-7 col-md-offset-1">
+        <div class="titles col-md-8 ">
             <img src="img/mudunologo.png">
             <h1>muduno</h1>
         </div>
-        <div class="col-md-3 datepicker-wrapper">
+        <div class="datepicker-wrapper col-md-3 pull-right">
             <form class="form-horizontal">
                 <fieldset>
                     <div class="control-group">
@@ -44,9 +46,9 @@
 
     </div>
 
-    <div class="row main-wrapper">
+    <div class="row panel-wrapper">
 
-        <div ng-controller="PanelCtrl as panel" class="col-md-10 col-md-offset-1">
+        <div ng-controller="PanelCtrl as panel" class="col-md-12">
 
             <ul class="nav nav-tabs">
                 <li ng-class="{ active : panel.isSelected(1) }" role="presentation">
@@ -88,22 +90,24 @@
             
             <!-- Engagement Panel -->
             <div class="panel" ng-show="panel.isSelected(3)">
-                <img src="img/engagement.png" alt="" class="img-responsive">
+                <img src="img/engagement.png" id="engagement" class="wire-frame img-responsive">
             </div>
 
             <!-- Control Panel -->
             <div class="panel" ng-show="panel.isSelected(4)">
-                <img src="img/control.png" alt="" class="img-responsive">
+                <img src="img/control.png" alt="" class="wire-frame img-responsive">
             </div>
 
             <!-- Contact Panel -->
             <div class="panel" ng-show="panel.isSelected(5)">
-                <img src="img/contact.png" alt="" class="img-responsive">
+                <img src="img/contact.png" alt="" class="wire-frame img-responsive">
             </div>
 
         </div>
         
     </div>
+</div>
+</div>
 </div>
 
 <!-- TWITTER BOOTSTRAP & JQUERY -->
