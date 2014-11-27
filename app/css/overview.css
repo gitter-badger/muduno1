@@ -1,23 +1,54 @@
 body {
   font-size: 16px; }
 
-.graph-wrapper {
-  padding-top: 10px; }
-  .graph-wrapper .btn-wrapper .btn-group .btn {
-    border-radius: 0;
-    border-color: #90ccde;
-    padding: 2px 10px;
-    background-color: steelblue;
-    color: white; }
+.graph-wrapper .btn-wrapper .btn-group .btn {
+  border-radius: 0;
+  border-color: white;
+  padding: 2px 10px;
+  background-color: steelblue;
+  color: white; }
+.graph-wrapper .svg-wrapper {
+  padding-left: 0;
+  padding-right: 0; }
   .graph-wrapper .svg-wrapper svg.chart .line {
     stroke: steelblue;
     stroke-width: 3;
     fill: none; }
+  .graph-wrapper .svg-wrapper svg.chart path.yAxisLine {
+    stroke: black;
+    stroke-width: 1;
+    fill: none;
+    shape-rendering: crispEdges; }
   .graph-wrapper .svg-wrapper svg.chart .axis text {
     font-size: 0.8em; }
     .graph-wrapper .svg-wrapper svg.chart .axis text path {
       fill: none;
       stroke: #000;
       shape-rendering: crispEdges; }
+
+.stats-wrapper div h4 {
+  font-size: 1.125em; }
+.stats-wrapper div div {
+  background-color: #ddd; }
+  .stats-wrapper div div p {
+    font-size: 2.83333em;
+    margin: 5px 0; }
+.stats-wrapper div .toploc-wrapper {
+  background-color: initial;
+  padding: 0; }
+  .stats-wrapper div .toploc-wrapper p {
+    font-size: 0.75em;
+    color: white;
+    margin: 0;
+    padding: 5px 10px; }
+    .stats-wrapper div .toploc-wrapper p:nth-child(1) {
+      background-color: #90ccde; }
+    .stats-wrapper div .toploc-wrapper p:nth-child(2) {
+      background-color: #E66D00; }
+    .stats-wrapper div .toploc-wrapper p:nth-child(3) {
+      background-color: #963933; }
+
+#pie-wrapper img.pie {
+  width: 80%; }
 
 /*# sourceMappingURL=overview.css.map */

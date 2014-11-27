@@ -22,13 +22,15 @@
 </head>
 <body>
 <div class="container-fluid">
+<div class="row">
+<div class="main-wrapper col-md-10 col-md-offset-1">
     <div class="row header">
 
-        <div class="col-md-7 col-md-offset-1">
+        <div class="titles col-md-8 ">
             <img src="img/mudunologo.png">
             <h1>muduno</h1>
         </div>
-        <div class="col-md-3 datepicker-wrapper">
+        <div class="datepicker-wrapper col-md-3 pull-right">
             <form class="form-horizontal">
                 <fieldset>
                     <div class="control-group">
@@ -44,9 +46,9 @@
 
     </div>
 
-    <div class="row main-wrapper">
+    <div class="row panel-wrapper">
 
-        <div ng-controller="PanelCtrl as panel" class="col-md-10 col-md-offset-1">
+        <div ng-controller="PanelCtrl as panel" class="col-md-12">
 
             <ul class="nav nav-tabs">
                 <li ng-class="{ active : panel.isSelected(1) }" role="presentation">
@@ -65,7 +67,7 @@
                     <a href="" ng-click="panel.selectTab(5)">Contact</a>
                 </li>
                 <li role="presentation" class="dropdown">
-                    <a class="dropdown-toggle" href="" data-toggle="dropdown">Alerts <b class="caret"></b></a>
+                    <a class="dropdown-toggle" href="" data-toggle="dropdown">Alerts <b class="glyphicon glyphicon-exclamation-sign"></b></a>
                     <ul class="dropdown-menu" role="menu">
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Campaign ends soon!</a></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">High Volume in King's Cross</a></li>
@@ -79,16 +81,15 @@
             </div>
             
             <!-- Location Panel -->
-            <div class="panel" ng-show="panel.isSelected(2)" ng-controller="DataTableCtrl as location"> 
-                
+            <div id="location-wrapper" class="panel" ng-show="panel.isSelected(2)" ng-controller="DataTableCtrl as location"> 
                 <div class="panel-group col-md-4" id="accordion" role="tablist" aria-multiselectable="true">
-                    
-                    <!-- Repeat from here -->
-                    <div class="accordion__tab-title" ng-repeat="location in locations | limitTo: 6">
 
+                    <!-- Repeat from here -->
+                    <div class="panel panel-default accordion__tab-title" ng-repeat="location in locations | limitTo: 6">
+                        
                         <!-- Clickable Heading -->
-                        <div class="accordion-heading" role="tab" id="heading{{location.locationID}}">
-                            <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{location.locationID}}" href="#collapse{{location.locationID}}">
+                        <div class="accordion-heading panel-heading" role="tab" id="heading{{location.locationID}}">
+                            <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{location.locationID}}" >
                                 <h5 ng-class="{'headloc1' : $index == 0, 'headloc2' : $index == 1, 'headloc3' : $index == 2, 'headloc4' : $index == 3, 'headloc5' : $index == 4, 'headloc6' : $index == 5}" class="locationTitle">{{location.location}}
                                     <div class="triangle">
                                         <span class="glyphicon glyphicon-play"></span>
@@ -97,9 +98,8 @@
                             </a>
                         </div>
                         <!-- Collapsible Section -->
-                        <div id="collapse{{location.locationID}}" class="collapse accordion__tab-content" role="tabpanel" aria-labelledby="heading{{location.locationID}}"> 
-
-                            <h2 id="tableHeader">Overview</h2>
+                        <div id="collapse{{location.locationID}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{location.locationID}}">
+                            <h2 class="tableHeader">Overview</h2>
 
                             <div ng-class="{'loc1' : $index == 0, 'loc2' : $index == 1, 'loc3' : $index == 2, 'loc4' : $index == 3, 'loc5' : $index == 4, 'loc6' : $index == 5}" >
                                 <table class="locationData">
@@ -124,12 +124,15 @@
                                         <td>{{location.rewardType}}</td>
                                     </tr>
                                 </table>
+                                <h5 class="accordionTabsHeader">More Detail</h5>
+                                <h5 class="accordionTabsHeader">Export</h5>
                             </div>
-                        </div> 
+                        </div>
+
                     </div>
                 </div>
 
-                <div class ="col-md-6 col-md-offset-1">
+                <div class ="col-md-8">
 					<div id="map-canvas"></div>
 				</div>
                 <kingscross></kingscross>
@@ -137,22 +140,24 @@
             
             <!-- Engagement Panel -->
             <div class="panel" ng-show="panel.isSelected(3)">
-                <img src="img/engagement.png" alt="" class="img-responsive">
+                <img src="img/engagement.png" id="engagement" class="wire-frame img-responsive">
             </div>
 
             <!-- Control Panel -->
             <div class="panel" ng-show="panel.isSelected(4)">
-                <img src="img/control.png" alt="" class="img-responsive">
+                <img src="img/control.png" alt="" class="wire-frame img-responsive">
             </div>
 
             <!-- Contact Panel -->
             <div class="panel" ng-show="panel.isSelected(5)">
-                <img src="img/contact.png" alt="" class="img-responsive">
+                <img src="img/contact.png" alt="" class="wire-frame img-responsive">
             </div>
 
         </div>
         
     </div>
+</div>
+</div>
 </div>
 
 <!-- TWITTER BOOTSTRAP & JQUERY -->
@@ -184,19 +189,19 @@
     </script>
 <!-- ANGULAR -->
     <script src="bower_components/angular/angular.js"></script>
-<!-- D3 SCRIPT TAG -->
-    <script src="http://d3js.org/queue.v1.min.js"></script>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
+<!-- LINK JAVASCRIPT FILES -->
+    <script src="js/controllers.js"></script>
+    <script src="js/app.js"></script>
 <!-- DATERANGEPICKER -->
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/daterangepicker.js"></script>
-<!-- LOAD GOOGLE MAPS -->
-    <script src="https://maps.googleapis.com/maps/api/js?v=AIzaSyDTzahCEc8Rvg1HnKAfsZ3jonSZFzRE1CY.exp"></script>
-    <script type="text/javascript" src="js/map.js"></script>
-<!-- LINK JAVASCRIPT FILES -->
-    <script src="js/controllers.js"></script>
-    <script src="js/app.js"></script> 
 
+<!-- D3 SCRIPT TAG -->
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+<!-- LOAD GOOGLE MAPS -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=AIzaSyDTzahCEc8Rvg1HnKAfsZ3jonSZFzRE1CY.exp"></script>
+	<script type="text/javascript" src="js/map.js"></script>
 
 </body>
 </html>
