@@ -38,7 +38,7 @@ function createHourlyGraph() {
 				
 		 		maxNumberEngagements = d3.max(Data, function(d) { return (d.values.length)});
 
-		 		xAxisTitle("Time");
+		 		xAxisTitle("Hour");
 		 		yAxisTitle();
 				setPath();
 				setYPath();
@@ -139,7 +139,7 @@ function xAxisTitle (title){
 function yAxisTitle (){
 	return setSvgSize.append("text")
        .attr("transform", "rotate(-90)")
-        .attr("y", 6)
+        .attr("y", 3)
         .attr("x", margin.top - (height / 2))
         .attr("dy", ".71em")
         .style("text-anchor", "end")
