@@ -57,7 +57,7 @@
                 <li ng-class="{ active : panel.isSelected(1) }" role="presentation">
                     <a href="" ng-click="panel.selectTab(1)">Overview</a>
                 </li>
-                <li ng-class="{ active : panel.isSelected(2) }" role="presentation">
+                <li ng-class="{ active : panel.isSelected(2) }" role="presentation" id="locationsTab">
                     <a href="" class="locationstab" ng-click="panel.selectTab(2)">Location</a>
                 </li>
                 <li ng-class="{ active : panel.isSelected(3) }" role="presentation">
@@ -88,7 +88,6 @@
                 <div class="panel-group col-md-4" id="accordion" role="tablist" aria-multiselectable="true">
 
                 
-
                     <!-- Repeat from here -->
                     <div class="panel panel-default accordion-tab-wrapper" ng-repeat="location in locations | limitTo: 6">
 
@@ -135,26 +134,35 @@
                                 <h5 class="accordionTabsHeader">Export</h5>
                             </div>
                         </div>
-
                     </div>
                 </div>
-                
-                <button id ="new"></button><button id ="new2"></button><button id ="new3"></button><button id ="new4"></button><button id ="new5"></button><button id ="new6"></button>
-                
                 <div class ="col-md-8">
-					<div id="map-canvas" ng-hide="dataVisualised"></div>
-				</div>
+                    <button class="detailsbutton" id ="new"></button><button class="detailsbutton" id ="new2"></button><button class="detailsbutton" id ="new3"></button><button class="detailsbutton" id ="new4"></button><button class="detailsbutton" id ="new5"></button><button class="detailsbutton" id ="new6"></button>
+                    
+                    <div>
+    					<div id="map-canvas" ng-hide="dataVisualised"></div>
+    				</div>
 
-              
-                 <div id="kingsCrossVisualised"><kingscross  ></kingscross></div>
-                <div id="coventGardenVisualised"><coventgarden ></coventgarden></div>
-                <div id="embankmentVisualised"><embankment ></embankment></div>
-                <div id="barbicanVisualised"><barbican ></barbican>
+                  
+                    <div id="kingsCrossVisualised">
+                        <kingscross></kingscross>
+                    </div>
+                    <div id="coventGardenVisualised">
+                        <coventgarden ></coventgarden>
+                    </div>
+                    <div id="embankmentVisualised">
+                        <embankment></embankment>
+                    </div>
+                    <div id="barbicanVisualised">
+                        <barbican ></barbican>
+                    </div>
+                    <div id="liverpoolstVisualised">
+                        <liverpoolst ></liverpoolst>
+                    </div>
+                    <div id="oxfordCircusVisualised">
+                        <oxfordcircus ></oxfordcircus>
+                    </div>
                 </div>
-                <div id="liverpoolstVisualised"><liverpoolst ></liverpoolst></div>
-
-                <div id="oxfordCircusVisualised"><oxfordcircus ></oxfordcircus></div>
-
             </div>
             
             <!-- Engagement Panel -->

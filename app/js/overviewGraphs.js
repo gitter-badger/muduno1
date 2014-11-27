@@ -26,6 +26,7 @@ function createDailyGraph() {
 		 		yAxisTitle();
 				setPath();
 				setYPath();
+				setXPath();
 				addXaxis();
 				addYaxis();
         });
@@ -42,6 +43,7 @@ function createHourlyGraph() {
 		 		yAxisTitle();
 				setPath();
 				setYPath();
+				setXPath();
 				addXaxis();
 				addYaxis();	
 		});
@@ -80,7 +82,18 @@ function yLine () {
 			.x(function(){return margin.left;})
 			.y(function(d){return d;})
 };		
- 		
+function setXPath () {
+	return setSvgSize.append("path")
+		.datum([margin.left , (width - margin.left)])
+		.attr("class","yAxisLine")
+		.attr("d", xLine())
+};
+
+function xLine () {
+		return d3.svg.line()
+			.x(function(d){return d;})
+			.y(function(){return height - margin.bottom;})
+};		
 
 
 // format and insert xAxis
@@ -89,7 +102,7 @@ function addXaxis (d) {
 			.data(Data)
 			.enter().append("g")
 			.attr("class", "axis")
-      		.attr("transform", function(d,i){return "translate(" + ((((width - margin.general) / (Data.length - 1)) * i) + margin.left ) + ","+ (height - margin.bottom ) +")";})
+      		.attr("transform", function(d,i){return "translate(" + ((((width - margin.general) / (Data.length - 1)) * i) + margin.left ) + ","+ (height - margin.bottom +10 ) +")";})
       		.append("text")
       		.attr("dy", ".71em")
       		.style("text-anchor", "start")

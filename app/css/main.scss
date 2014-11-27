@@ -7,6 +7,12 @@ $h4: 1.125em;
 $h5: 1em;
 $small: 0.75em;
 
+$location1maincolor: #90ccde;
+$location2maincolor: #E66D00;
+$location3maincolor: #963933;
+$location4maincolor: #A6A6A6;
+$location5maincolor: #5F4A7C;
+$location6maincolor: #83c47f;
 
 body {
 	font-size: 16px;
@@ -90,208 +96,34 @@ div.panel {
 	}
 }
 
-//Specific Embankment location details styling
-
-.embankment {
-	h5 {
-		background-color: #963933;
-		color: white;
-		padding: 0.5em;
-		margin-top: 1em;
-		margin-bottom: 0.5em;
-	}
+.detailsbutton{
+	height: 1em;
+	width: 4em;
+	margin-bottom: 0.5em;
+	border-radius:10%;
 }
 
-ul.nav-tabs.embankmentNav {
-	li {
-		a {
-			color: white;
-			font-size: 0.7em;
-			padding-left: 1em;
-			padding-right: 1em;
-		}
-	}
-
-	a:hover {
-		background-color: initial;
-		border: none;
-	}
-
-	background-color: #963933;
-	margin-left: 1em;
-	width: 25em;
-	height: 1.78em;
+#new {
+	background-color: $location1maincolor;
 }
 
-#embankmentdiv {
-	height: 500px;
-	background-color: #F7D5D5;
+#new2 {
+	background-color: $location2maincolor;
 }
 
-.embankmentNav {
-	background-color: #963933;
-	width: 100%;
-
-		ul {
-			li
-		    	{
-					color: white;
-			 	}
-			}
-
+#new3 {
+	background-color: $location3maincolor;
 }
 
-
-//Specific Barbican location details styling
-
-.barbican {
-	h5 {
-		background-color: #A6A6A6;
-		color: white;
-		padding: 0.5em;
-		margin-top: 1em;
-		margin-bottom: 0.5em;
-	}
+#new4 {
+	background-color: $location4maincolor;
 }
 
-ul.nav-tabs.barbicanNav {
-	li {
-		a {
-			color: white;
-			font-size: 0.7em;
-			padding-left: 1em;
-			padding-right: 1em;
-		}
-	}
-
-	a:hover {
-		background-color: initial;
-		border: none;
-	}
-
-	background-color: #A6A6A6;
-	margin-left: 1em;
-	width: 25em;
-	height: 1.78em;
+#new5 {
+	background-color: $location5maincolor;
 }
 
-#barbicandiv {
-	height: 500px;
-	background-color: #e3e3e3;
-}
-
-.barbicanNav {
-	background-color: #A6A6A6;
-	width: 100%;
-
-		ul {
-			li
-		    	{
-					color: white;
-			 	}
-			}
-
-}
-
-
-//Specific Liverpool Street location details styling
-
-.liverpoolst {
-	h5 {
-		background-color: #5F4A7C;
-		color: white;
-		padding: 0.5em;
-		margin-top: 1em;
-		margin-bottom: 0.5em;
-	}
-}
-
-ul.nav-tabs.liverpoolNav {
-	li {
-		a {
-			color: white;
-			font-size: 0.7em;
-			padding-left: 1em;
-			padding-right: 1em;
-		}
-	}
-
-	a:hover {
-		background-color: initial;
-		border: none;
-	}
-
-	background-color: #5F4A7C;
-	margin-left: 1em;
-	width: 25em;
-	height: 1.78em;
-}
-
-#liverpooldiv {
-	height: 500px;
-	background-color: #DAD8E8;
-}
-
-.liverpoolNav {
-	background-color: #5F4A7C;
-	width: 100%;
-
-		ul {
-			li
-		    	{
-					color: white;
-			 	}
-			}
-
-}
-
-//Specific Oxford Circus location details styling
-
-.oxfordcircus {
-	h5 {
-		background-color: #83c47f;
-		color: white;
-		padding: 0.5em;
-		margin-top: 1em;
-		margin-bottom: 0.5em;
-	}
-}
-
-ul.nav-tabs.oxfordNav {
-	li {
-		a {
-			color: white;
-			font-size: 0.7em;
-			padding-left: 1em;
-			padding-right: 1em;
-		}
-	}
-
-	a:hover {
-		background-color: initial;
-		border: none;
-	}
-
-	background-color: #83c47f;
-	margin-left: 1em;
-	width: 25em;
-	height: 1.78em;
-}
-
-#oxforddiv {
-	height: 500px;
-	background-color: #E5F2E4;
-}
-
-.oxfordNav {
-	background-color: #83c47f;
-	width: 100%;
-
-		ul {
-			li
-		    	{
-					color: white;
-			 	}
-			}
-
+#new6 {
+	background-color: $location6maincolor;
+	
 }

@@ -19,7 +19,7 @@ $("#new").on("click", function (){
 });
  $("#new2").on("click", function (){
     $("#coventGardenVisualised").show();
-   
+   $("#map-canvas").hide();
     $("#kingsCrossVisualised").hide();
     $("#embankmentVisualised").hide();
     $("#barbicanVisualised").hide();
@@ -28,7 +28,7 @@ $("#new").on("click", function (){
 });
   $("#new3").on("click", function (){
     $("#embankmentVisualised").show();
-    
+    $("#map-canvas").hide();
     $("#kingsCrossVisualised").hide();
     $("#coventGardenVisualised").hide();
     $("#barbicanVisualised").hide();
@@ -37,7 +37,7 @@ $("#new").on("click", function (){
 });
       $("#new4").on("click", function (){
     $("#barbicanVisualised").show();
-   
+   $("#map-canvas").hide();
     $("#kingsCrossVisualised").hide();
     $("#coventGardenVisualised").hide();
     $("#embankmentVisualised").hide();
@@ -46,7 +46,7 @@ $("#new").on("click", function (){
 });
     $("#new5").on("click", function (){
     $("#liverpoolstVisualised").show();
-    
+    $("#map-canvas").hide();
     $("#kingsCrossVisualised").hide();
     $("#coventGardenVisualised").hide();
     $("#embankmentVisualised").hide();
@@ -55,7 +55,7 @@ $("#new").on("click", function (){
 });
       $("#new6").on("click", function (){
     $("#oxfordCircusVisualised").show();
-    
+    $("#map-canvas").hide();
     $("#kingsCrossVisualised").hide();
     $("#coventGardenVisualised").hide();
     $("#embankmentVisualised").hide();
@@ -71,4 +71,12 @@ $("#new").on("click", function (){
     $("#barbicanVisualised").hide();
     $("#liverpoolstVisualised").hide(); 
 });
-
+     $("#locationsTab").on("click", function (){
+    $("#map-canvas").show();
+    $("#oxfordCircusVisualised").hide();
+    $("#kingsCrossVisualised").hide();
+    $("#coventGardenVisualised").hide();
+    $("#embankmentVisualised").hide();
+    $("#barbicanVisualised").hide();
+    $("#liverpoolstVisualised").hide(); 
+});
