@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/overview.css">
     <link rel="stylesheet" href="css/main.css">
 
+     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -136,20 +138,105 @@
 
                     </div>
                 </div>
-                <button ng-click = "dataVisualised = !dataVisualised"></button><button></button><button></button><button></button><button></button><button></button>
+        
+
+               
+
+            </div>
+                <button id ="new"></button><button id ="new2"></button><button id ="new3"></button><button id ="new4"></button><button id ="new5"></button><button id ="new6"></button>
                 
                 <div class ="col-md-8">
 					<div id="map-canvas" ng-hide="dataVisualised"></div>
 				</div>
 
-                <kingscross id = "dataInfo" ng-show="dataVisualised"></kingscross>
-                <coventgarden></coventgarden>
-                <embankment></embankment>
-                <barbican></barbican>
-                <liverpoolst></liverpoolst>
-                <oxfordcircus></oxfordcircus>
+              
+                 <div id="kingsCrossVisualised"><kingscross  ></kingscross></div>
+                <div id="coventGardenVisualised"><coventgarden ></coventgarden></div>
+                <div id="embankmentVisualised"><embankment ></embankment></div>
+                <div id="barbicanVisualised"><barbican ></barbican>
+                </div>
+                <div id="liverpoolstVisualised"><liverpoolst ></liverpoolst></div>
+
+                <div id="oxfordCircusVisualised"><oxfordcircus ></oxfordcircus></div>
 
             </div>
+                <script type="text/javascript">
+            $(document).ready(function (){
+                    $("#kingsCrossVisualised").hide();
+                    $("#coventGardenVisualised").hide();
+                    $("#embankmentVisualised").hide();
+                    $("#barbicanVisualised").hide();
+                    $("#liverpoolstVisualised").hide();
+                    $("#oxfordCircusVisualised").hide();  
+                    console.log("ben"); 
+                });
+            $("#new").on("click", function (){
+                $("#kingsCrossVisualised").show();
+                $("#map-canvas").hide();
+                $("#coventGardenVisualised").hide();
+                $("#embankmentVisualised").hide();
+                $("#barbicanVisualised").hide();
+                $("#liverpoolstVisualised").hide();
+                $("#oxfordCircusVisualised").hide();  
+
+            });
+             $("#new2").on("click", function (){
+                $("#coventGardenVisualised").show();
+               
+                $("#kingsCrossVisualised").hide();
+                $("#embankmentVisualised").hide();
+                $("#barbicanVisualised").hide();
+                $("#liverpoolstVisualised").hide();
+                $("#oxfordCircusVisualised").hide(); 
+            });
+              $("#new3").on("click", function (){
+                $("#embankmentVisualised").show();
+                
+                $("#kingsCrossVisualised").hide();
+                $("#coventGardenVisualised").hide();
+                $("#barbicanVisualised").hide();
+                $("#liverpoolstVisualised").hide();
+                $("#oxfordCircusVisualised").hide(); 
+            });
+                  $("#new4").on("click", function (){
+                $("#barbicanVisualised").show();
+               
+                $("#kingsCrossVisualised").hide();
+                $("#coventGardenVisualised").hide();
+                $("#embankmentVisualised").hide();
+                $("#liverpoolstVisualised").hide();
+                $("#oxfordCircusVisualised").hide(); 
+            });
+                $("#new5").on("click", function (){
+                $("#liverpoolstVisualised").show();
+                
+                $("#kingsCrossVisualised").hide();
+                $("#coventGardenVisualised").hide();
+                $("#embankmentVisualised").hide();
+                $("#barbicanVisualised").hide();
+                $("#oxfordCircusVisualised").hide(); 
+            });
+                  $("#new6").on("click", function (){
+                $("#oxfordCircusVisualised").show();
+                
+                $("#kingsCrossVisualised").hide();
+                $("#coventGardenVisualised").hide();
+                $("#embankmentVisualised").hide();
+                $("#barbicanVisualised").hide();
+                $("#liverpoolstVisualised").hide(); 
+            });
+                   $("#accordion").on("click", function (){
+                $("#map-canvas").show();
+                $("#oxfordCircusVisualised").hide();
+                $("#kingsCrossVisualised").hide();
+                $("#coventGardenVisualised").hide();
+                $("#embankmentVisualised").hide();
+                $("#barbicanVisualised").hide();
+                $("#liverpoolstVisualised").hide(); 
+            });
+
+
+            </script>
             
             <!-- Engagement Panel -->
             <div class="panel" ng-show="panel.isSelected(3)">
@@ -175,7 +262,7 @@
 
 <!-- TWITTER BOOTSTRAP & JQUERY -->
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+   
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
