@@ -151,4 +151,223 @@
   margin: 0px;
   padding: 0px; }
 
+li.active1 {
+  background-color: #95999C; }
+
+.piechart {
+  height: 100%;
+  width: 100%;
+  margin-left: 3em;
+  margin-top: -2em; }
+
+.adfiller {
+  height: 12em;
+  width: 100%;
+  padding: 0px; }
+
+.graphFiller {
+  height: 100%;
+  width: 100%;
+  padding-right: 1.5em;
+  width: 26.6em;
+  margin-left: -0.89em;
+  margin-top: 0.1em; }
+
+.notes {
+  width: 100%;
+  height: 11.1em;
+  font-family: inherit;
+  font-size: 14px;
+  color: #95999C; }
+
+.notesInput {
+  width: 100%; }
+
+.kingsx h5 {
+  background-color: #90ccde;
+  color: white;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em; }
+
+ul.nav-tabs.kingsxNav {
+  background-color: #90ccde;
+  margin-left: 1em;
+  width: 25em;
+  height: 1.78em; }
+  ul.nav-tabs.kingsxNav li a {
+    color: white;
+    font-size: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em; }
+  ul.nav-tabs.kingsxNav a:hover {
+    background-color: initial;
+    border: none; }
+
+#kingsdiv {
+  height: 500px;
+  background-color: #DBEDF4; }
+
+.kingxNav {
+  background-color: #90ccde;
+  width: 100%;
+  padding: 1em; }
+  .kingxNav ul li {
+    color: white; }
+
+.covg h5 {
+  background-color: #E66D00;
+  color: white;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em; }
+
+ul.nav-tabs.covgNav {
+  background-color: #E66D00;
+  margin-left: 1em;
+  width: 25em;
+  height: 1.78em; }
+  ul.nav-tabs.covgNav li a {
+    color: white;
+    font-size: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em; }
+  ul.nav-tabs.covgNav a:hover {
+    background-color: initial;
+    border: none; }
+
+#covgdiv {
+  height: 500px;
+  background-color: #FFDFC4; }
+
+.covgNav {
+  background-color: #E66D00;
+  width: 100%; }
+  .covgNav ul li {
+    color: white; }
+
+.embankment h5 {
+  background-color: #963933;
+  color: white;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em; }
+
+ul.nav-tabs.embankmentNav {
+  background-color: #963933;
+  margin-left: 1em;
+  width: 25em;
+  height: 1.78em; }
+  ul.nav-tabs.embankmentNav li a {
+    color: white;
+    font-size: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em; }
+  ul.nav-tabs.embankmentNav a:hover {
+    background-color: initial;
+    border: none; }
+
+#embankmentdiv {
+  height: 500px;
+  background-color: #F7D5D5; }
+
+.embankmentNav {
+  background-color: #963933;
+  width: 100%; }
+  .embankmentNav ul li {
+    color: white; }
+
+.barbican h5 {
+  background-color: #A6A6A6;
+  color: white;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em; }
+
+ul.nav-tabs.barbicanNav {
+  background-color: #A6A6A6;
+  margin-left: 1em;
+  width: 25em;
+  height: 1.78em; }
+  ul.nav-tabs.barbicanNav li a {
+    color: white;
+    font-size: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em; }
+  ul.nav-tabs.barbicanNav a:hover {
+    background-color: initial;
+    border: none; }
+
+#barbicandiv {
+  height: 500px;
+  background-color: #e3e3e3; }
+
+.barbicanNav {
+  background-color: #A6A6A6;
+  width: 100%; }
+  .barbicanNav ul li {
+    color: white; }
+
+.liverpoolst h5 {
+  background-color: #5F4A7C;
+  color: white;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em; }
+
+ul.nav-tabs.liverpoolNav {
+  background-color: #5F4A7C;
+  margin-left: 1em;
+  width: 25em;
+  height: 1.78em; }
+  ul.nav-tabs.liverpoolNav li a {
+    color: white;
+    font-size: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em; }
+  ul.nav-tabs.liverpoolNav a:hover {
+    background-color: initial;
+    border: none; }
+
+#liverpooldiv {
+  height: 500px;
+  background-color: #DAD8E8; }
+
+.liverpoolNav {
+  background-color: #5F4A7C;
+  width: 100%; }
+  .liverpoolNav ul li {
+    color: white; }
+
+.oxfordcircus h5 {
+  background-color: #83c47f;
+  color: white;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em; }
+
+ul.nav-tabs.oxfordNav {
+  background-color: #83c47f;
+  margin-left: 1em;
+  width: 25em;
+  height: 1.78em; }
+  ul.nav-tabs.oxfordNav li a {
+    color: white;
+    font-size: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em; }
+  ul.nav-tabs.oxfordNav a:hover {
+    background-color: initial;
+    border: none; }
+
+#oxforddiv {
+  height: 500px;
+  background-color: #E5F2E4; }
+
+.oxfordNav {
+  background-color: #83c47f;
+  width: 100%; }
+  .oxfordNav ul li {
+    color: white; }
+
 /*# sourceMappingURL=location.css.map */
