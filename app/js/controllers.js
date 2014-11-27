@@ -21,6 +21,38 @@ mudunoApp.directive('kingscross', function() {
     }
 });
 
+mudunoApp.directive('coventgarden', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'inc/coventgarden.html'
+    }
+});
+
+mudunoApp.directive('embankment', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'inc/embankment.html'
+    }
+});
+
+mudunoApp.directive('barbican', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'inc/barbican.html'
+    }
+});
+mudunoApp.directive('liverpoolst', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'inc/liverpoolstreet.html'
+    }
+});
+mudunoApp.directive('oxfordcircus', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'inc/oxfordcircus.html'
+    }
+});
 
 
 mudunoApp.controller('PanelCtrl', function(){
@@ -95,4 +127,8 @@ mudunoApp.controller('DataTableCtrl', function ($scope){
   ];
 });
 
-
+muduno.controller("MyController", function($scope) {
+                $scope.myForm = {};
+                $scope.myForm.firstName = "Jakob";
+                $scope.myForm.lastName  = "Jenkov";
+            } );
