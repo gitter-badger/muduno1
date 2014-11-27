@@ -49,46 +49,101 @@ div.panel {
   div.panel #engagement {
     height: 515px; }
 
-.kingsx h5 {
-  background-color: #90ccde;
-  color: white;
-  padding: 0.5em; }
-
-.kingxNav {
-  background-color: #90ccde;
-  width: 100%;
-  padding: 1em; }
-
-.kingsxNav li {
-  display: inline;
-  padding: 0.5em;
-  font-size: 1em; }
-
-.kingsxNav ul {
-  background-color: #90ccde; }
-
-.kingsxNav a {
-  color: white; }
+li.active1 {
+  background-color: #95999C; }
 
 .piechart {
-  height: 100%;
-  width: 100%;
-  margin-left: 4em; }
+  height: 80%;
+  width: 54%;
+  margin-left: 6.5em;
+  margin-top: -0.3em;
+  border: 1px solid #DCDDDD; }
 
 .adfiller {
-  height: 9.8em;
+  height: 12em;
   width: 100%;
   padding: 0px; }
 
 .graphFiller {
   height: 100%;
   width: 100%;
-  padding: 0px; }
+  padding-right: 1.5em;
+  width: 25.51em;
+  margin-left: -0.89em;
+  margin-top: 0.1em; }
 
 .notes {
   width: 100%;
-  height: 8em;
-  padding-top: 20px;
-  padding-bottom: 20px; }
+  height: 12.1em;
+  font-family: inherit;
+  font-size: 14px;
+  color: #95999C; }
+
+.notesInput {
+  width: 100%; }
+
+.kingsx h5 {
+  background-color: #90ccde;
+  color: white;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+ul.nav-tabs.kingsxNav {
+  background-color: #90ccde;
+  margin-left: 1em;
+  width: 25em;
+  height: 1.78em; }
+  ul.nav-tabs.kingsxNav li a {
+    color: white;
+    font-size: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em; }
+  ul.nav-tabs.kingsxNav a:hover {
+    background-color: initial;
+    border: none; }
+
+#kingsdiv {
+  height: 500px;
+  background-color: #DBEDF4; }
+
+.kingxNav {
+  background-color: #90ccde;
+  width: 100%;
+  padding: 1em; }
+  .kingxNav ul li {
+    color: white; }
+
+.covg h5 {
+  background-color: #E66D00;
+  color: white;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+ul.nav-tabs.covgNav {
+  background-color: #E66D00;
+  margin-left: 1em;
+  width: 25em;
+  height: 1.78em; }
+  ul.nav-tabs.covgNav li a {
+    color: white;
+    font-size: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em; }
+  ul.nav-tabs.covgNav a:hover {
+    background-color: initial;
+    border: none; }
+
+#covgdiv {
+  height: 500px;
+  background-color: #FFDFC4; }
+
+.covgNav {
+  background-color: #E66D00;
+  width: 100%;
+  padding: 1em; }
+  .covgNav ul li {
+    color: white; }
 
 /*# sourceMappingURL=main.css.map */
