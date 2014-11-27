@@ -1,7 +1,7 @@
 body {
   font-size: 16px; }
   body .container-fluid {
-    background-color: #90ccde; }
+    background-color: rgba(144, 204, 222, 0.57); }
     body .container-fluid .row .main-wrapper {
       background-color: #fff;
       border-left: 6px #bbb solid;
@@ -34,7 +34,8 @@ body {
 ul.nav-tabs li, ul.nav-tabs li.active {
   font-size: 1em; }
   ul.nav-tabs li a, ul.nav-tabs li.active a {
-    padding: 5px 25px; }
+    padding: 5px 25px;
+    border-radius: 0; }
 ul.nav-tabs li a {
   color: #5D93A3; }
 

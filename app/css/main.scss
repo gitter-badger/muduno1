@@ -17,7 +17,7 @@ $location6maincolor: #83c47f;
 body {
 	font-size: 16px;
 	.container-fluid {
-		background-color: $mainColor;
+		background-color: rgba(144, 204, 222, 0.57);
 		.row {
 			.main-wrapper {
 				background-color: #fff;
@@ -73,6 +73,7 @@ ul.nav-tabs {
 		font-size: $h5;
 		a {
 			padding: 5px 25px;
+			border-radius: 0;
 		}
 	}
 	li {
@@ -94,6 +95,7 @@ div.panel {
 		height: 515px;
 	}
 }
+
 .detailsbutton{
 	height: 1em;
 	width: 4em;
@@ -107,22 +109,18 @@ div.panel {
 
 #new2 {
 	background-color: $location2maincolor;
-	
 }
 
 #new3 {
 	background-color: $location3maincolor;
-	
 }
 
 #new4 {
 	background-color: $location4maincolor;
-	
 }
 
 #new5 {
 	background-color: $location5maincolor;
-	
 }
 
 #new6 {

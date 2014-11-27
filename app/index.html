@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/overview.css">
     <link rel="stylesheet" href="css/main.css">
 
-     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
 </head>
 <body>
@@ -57,7 +57,7 @@
                 <li ng-class="{ active : panel.isSelected(1) }" role="presentation">
                     <a href="" ng-click="panel.selectTab(1)">Overview</a>
                 </li>
-                <li ng-class="{ active : panel.isSelected(2) }" role="presentation">
+                <li ng-class="{ active : panel.isSelected(2) }" role="presentation" id="locationsTab">
                     <a href="" class="locationstab" ng-click="panel.selectTab(2)">Location</a>
                 </li>
                 <li ng-class="{ active : panel.isSelected(3) }" role="presentation">
@@ -89,18 +89,19 @@
 
                 
                     <!-- Repeat from here -->
-                    <div class="panel panel-default accordion__tab-title" ng-repeat="location in locations | limitTo: 6">
+                    <div class="panel panel-default accordion-tab-wrapper" ng-repeat="location in locations | limitTo: 6">
+
                         <!-- Clickable Heading -->
                         <div class="accordion-heading panel-heading" role="tab" id="heading{{location.locationID}}">
                             <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{location.locationID}}" >
                                 <h5 ng-class="{'headloc1' : $index == 0, 'headloc2' : $index == 1, 'headloc3' : $index == 2, 'headloc4' : $index == 3, 'headloc5' : $index == 4, 'headloc6' : $index == 5}" class="locationTitle">{{location.location}}
-                                    <div class="triangle">
-                                        <span class="glyphicon glyphicon-play"></span>
-                                    </div>
-                                </h5> 
+                                    
+                                        <span class="triangle glyphicon glyphicon-play"></span>
+                                    
+                                </h5>
+                                 
                             </a>
                         </div>
-                   
                     
                         <!-- Collapsible Section -->
                         <div id="collapse{{location.locationID}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{location.locationID}}">
@@ -109,24 +110,23 @@
                             <div ng-class="{'loc1' : $index == 0, 'loc2' : $index == 1, 'loc3' : $index == 2, 'loc4' : $index == 3, 'loc5' : $index == 4, 'loc6' : $index == 5}" >
                                 <table class="locationData">
                                     <tr>
-                                    
-                                        <td>Engagements</td>
+                                        <td class="left">Engagements</td>
                                         <td>{{location.engagements}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Social Shares</td>
+                                        <td class="left">Social Shares</td>
                                         <td>{{location.socialShares}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Claims</td>
+                                        <td class="left">Claims</td>
                                         <td>{{location.claims}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Rewards Left</td>
+                                        <td class="left">Rewards Left</td>
                                         <td>{{location.rewardsLeft}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Reward Type</td>
+                                        <td class="left">Reward Type</td>
                                         <td>{{location.rewardType}}</td>
                                     </tr>
                                 </table>
@@ -136,11 +136,10 @@
                         </div>
                     </div>
                 </div>
-
                 <div class ="col-md-8">
                     <button class="detailsbutton" id ="new"></button><button class="detailsbutton" id ="new2"></button><button class="detailsbutton" id ="new3"></button><button class="detailsbutton" id ="new4"></button><button class="detailsbutton" id ="new5"></button><button class="detailsbutton" id ="new6"></button>
                     
-                    <div >
+                    <div>
     					<div id="map-canvas" ng-hide="dataVisualised"></div>
     				</div>
 
@@ -165,83 +164,6 @@
                     </div>
                 </div>
             </div>
-                <script type="text/javascript">
-            $(document).ready(function (){
-                    $("#kingsCrossVisualised").hide();
-                    $("#coventGardenVisualised").hide();
-                    $("#embankmentVisualised").hide();
-                    $("#barbicanVisualised").hide();
-                    $("#liverpoolstVisualised").hide();
-                    $("#oxfordCircusVisualised").hide();  
-                    console.log("ben"); 
-                });
-            $("#new").on("click", function (){
-                $("#kingsCrossVisualised").show();
-                $("#map-canvas").hide();
-                $("#coventGardenVisualised").hide();
-                $("#embankmentVisualised").hide();
-                $("#barbicanVisualised").hide();
-                $("#liverpoolstVisualised").hide();
-                $("#oxfordCircusVisualised").hide();  
-
-            });
-             $("#new2").on("click", function (){
-                $("#coventGardenVisualised").show();
-               $("#map-canvas").hide();
-                $("#kingsCrossVisualised").hide();
-                $("#embankmentVisualised").hide();
-                $("#barbicanVisualised").hide();
-                $("#liverpoolstVisualised").hide();
-                $("#oxfordCircusVisualised").hide(); 
-            });
-              $("#new3").on("click", function (){
-                $("#embankmentVisualised").show();
-                $("#map-canvas").hide();
-                $("#kingsCrossVisualised").hide();
-                $("#coventGardenVisualised").hide();
-                $("#barbicanVisualised").hide();
-                $("#liverpoolstVisualised").hide();
-                $("#oxfordCircusVisualised").hide(); 
-            });
-                  $("#new4").on("click", function (){
-                $("#barbicanVisualised").show();
-               $("#map-canvas").hide();
-                $("#kingsCrossVisualised").hide();
-                $("#coventGardenVisualised").hide();
-                $("#embankmentVisualised").hide();
-                $("#liverpoolstVisualised").hide();
-                $("#oxfordCircusVisualised").hide(); 
-            });
-                $("#new5").on("click", function (){
-                $("#liverpoolstVisualised").show();
-                $("#map-canvas").hide();
-                $("#kingsCrossVisualised").hide();
-                $("#coventGardenVisualised").hide();
-                $("#embankmentVisualised").hide();
-                $("#barbicanVisualised").hide();
-                $("#oxfordCircusVisualised").hide(); 
-            });
-                  $("#new6").on("click", function (){
-                $("#oxfordCircusVisualised").show();
-                $("#map-canvas").hide();
-                $("#kingsCrossVisualised").hide();
-                $("#coventGardenVisualised").hide();
-                $("#embankmentVisualised").hide();
-                $("#barbicanVisualised").hide();
-                $("#liverpoolstVisualised").hide(); 
-            });
-                   $("#accordion").on("click", function (){
-                $("#map-canvas").show();
-                $("#oxfordCircusVisualised").hide();
-                $("#kingsCrossVisualised").hide();
-                $("#coventGardenVisualised").hide();
-                $("#embankmentVisualised").hide();
-                $("#barbicanVisualised").hide();
-                $("#liverpoolstVisualised").hide(); 
-            });
-
-
-            </script>
             
             <!-- Engagement Panel -->
             <div class="panel" ng-show="panel.isSelected(3)">
@@ -264,11 +186,11 @@
 </div>
 </div>
 </div>
-
+<!-- Show More details -->
+    <script type="text/javascript" src="js/moreDetails.js"></script>
 <!-- TWITTER BOOTSTRAP & JQUERY -->
-
-   
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Daterange Picker Constructor -->
     <script type="text/javascript">
     $(document).ready(function() {
         $('#reservation').daterangepicker(
@@ -293,10 +215,6 @@
         );
     });
     </script>
-
- 
-    </script>
-   
 <!-- ANGULAR -->
     <script src="bower_components/angular/angular.js"></script>
 <!-- LINK JAVASCRIPT FILES -->
@@ -312,6 +230,7 @@
 <!-- LOAD GOOGLE MAPS -->
 	<script src="https://maps.googleapis.com/maps/api/js?v=AIzaSyDTzahCEc8Rvg1HnKAfsZ3jonSZFzRE1CY.exp"></script>
 	<script type="text/javascript" src="js/map.js"></script>
+
 
 </body>
 </html>
