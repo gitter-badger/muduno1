@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/overview.css">
     <link rel="stylesheet" href="css/main.css">
 
-     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
 </head>
 <body>
@@ -161,83 +161,6 @@
                 <div id="oxfordCircusVisualised"><oxfordcircus ></oxfordcircus></div>
 
             </div>
-                <script type="text/javascript">
-            $(document).ready(function (){
-                    $("#kingsCrossVisualised").hide();
-                    $("#coventGardenVisualised").hide();
-                    $("#embankmentVisualised").hide();
-                    $("#barbicanVisualised").hide();
-                    $("#liverpoolstVisualised").hide();
-                    $("#oxfordCircusVisualised").hide();  
-                    console.log("ben"); 
-                });
-            $("#new").on("click", function (){
-                $("#kingsCrossVisualised").show();
-                $("#map-canvas").hide();
-                $("#coventGardenVisualised").hide();
-                $("#embankmentVisualised").hide();
-                $("#barbicanVisualised").hide();
-                $("#liverpoolstVisualised").hide();
-                $("#oxfordCircusVisualised").hide();  
-
-            });
-             $("#new2").on("click", function (){
-                $("#coventGardenVisualised").show();
-               
-                $("#kingsCrossVisualised").hide();
-                $("#embankmentVisualised").hide();
-                $("#barbicanVisualised").hide();
-                $("#liverpoolstVisualised").hide();
-                $("#oxfordCircusVisualised").hide(); 
-            });
-              $("#new3").on("click", function (){
-                $("#embankmentVisualised").show();
-                
-                $("#kingsCrossVisualised").hide();
-                $("#coventGardenVisualised").hide();
-                $("#barbicanVisualised").hide();
-                $("#liverpoolstVisualised").hide();
-                $("#oxfordCircusVisualised").hide(); 
-            });
-                  $("#new4").on("click", function (){
-                $("#barbicanVisualised").show();
-               
-                $("#kingsCrossVisualised").hide();
-                $("#coventGardenVisualised").hide();
-                $("#embankmentVisualised").hide();
-                $("#liverpoolstVisualised").hide();
-                $("#oxfordCircusVisualised").hide(); 
-            });
-                $("#new5").on("click", function (){
-                $("#liverpoolstVisualised").show();
-                
-                $("#kingsCrossVisualised").hide();
-                $("#coventGardenVisualised").hide();
-                $("#embankmentVisualised").hide();
-                $("#barbicanVisualised").hide();
-                $("#oxfordCircusVisualised").hide(); 
-            });
-                  $("#new6").on("click", function (){
-                $("#oxfordCircusVisualised").show();
-                
-                $("#kingsCrossVisualised").hide();
-                $("#coventGardenVisualised").hide();
-                $("#embankmentVisualised").hide();
-                $("#barbicanVisualised").hide();
-                $("#liverpoolstVisualised").hide(); 
-            });
-                   $("#accordion").on("click", function (){
-                $("#map-canvas").show();
-                $("#oxfordCircusVisualised").hide();
-                $("#kingsCrossVisualised").hide();
-                $("#coventGardenVisualised").hide();
-                $("#embankmentVisualised").hide();
-                $("#barbicanVisualised").hide();
-                $("#liverpoolstVisualised").hide(); 
-            });
-
-
-            </script>
             
             <!-- Engagement Panel -->
             <div class="panel" ng-show="panel.isSelected(3)">
@@ -262,9 +185,8 @@
 </div>
 
 <!-- TWITTER BOOTSTRAP & JQUERY -->
-
-   
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Daterange Picker Constructor -->
     <script type="text/javascript">
     $(document).ready(function() {
         $('#reservation').daterangepicker(
@@ -289,10 +211,6 @@
         );
     });
     </script>
-
- 
-    </script>
-   
 <!-- ANGULAR -->
     <script src="bower_components/angular/angular.js"></script>
 <!-- LINK JAVASCRIPT FILES -->
@@ -308,6 +226,8 @@
 <!-- LOAD GOOGLE MAPS -->
 	<script src="https://maps.googleapis.com/maps/api/js?v=AIzaSyDTzahCEc8Rvg1HnKAfsZ3jonSZFzRE1CY.exp"></script>
 	<script type="text/javascript" src="js/map.js"></script>
+<!-- Show More details -->
+    <script type="text/javascript" src="js/moreDetails.js"></script>
 
 </body>
 </html>
