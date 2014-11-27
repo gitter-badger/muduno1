@@ -95,4 +95,8 @@ mudunoApp.controller('DataTableCtrl', function ($scope){
   ];
 });
 
-
+muduno.controller("MyController", function($scope) {
+                $scope.myForm = {};
+                $scope.myForm.firstName = "Jakob";
+                $scope.myForm.lastName  = "Jenkov";
+            } );

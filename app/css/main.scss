@@ -68,12 +68,41 @@ div.panel {
 	box-shadow: none;
 }
 
+
+//King Cross Location Details styling
+
 .kingsx {
 	h5 {
 		background-color: #90ccde;
 		color: white;
-		padding:0.5em;
+		padding: 0.5em;
+		margin-top: 1em;
+		margin-bottom: 1em;
 	}
+}
+
+ul.nav-tabs.kingsxNav {
+	li {
+		a {
+			color: white;
+			font-size: 0.7em;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+	}
+
+	a:hover {
+		background-color: initial;
+		border: none;
+	}
+
+	background-color: #90ccde;
+	margin-left: 1em;
+	width: 24em;
+}
+
+#kingsdiv {
+	height: 500px;
 }
 
 .kingxNav {
@@ -81,31 +110,29 @@ div.panel {
 	width: 100%;
 	padding: 1em;
 
+		ul {
+			li
+		    	{
+					color: white;
+			 	}
+			}
+
 }
 
-.kingsxNav li {
-	display: inline;
-	padding: 0.5em;
-	font-size: 1em;
+li.active1 {
+	background-color: #95999C;
 }
-
-.kingsxNav ul {
-	background-color: #90ccde;
-}
-
-.kingsxNav a {
-	color: white;
-}
-
 
 .piechart {
-	height: 100%;
-	width: 100%;
-	margin-left: 4em;
+	height: 80%;
+	width: 54%;
+	margin-left: 6.5em;
+	margin-top: -0.3em;
+	border: 1px solid #DCDDDD;
 }
 
 .adfiller {
-	height: 9.8em;
+	height: 12em;
 	width: 100%;
 	padding: 0px;
 }
@@ -113,13 +140,22 @@ div.panel {
 .graphFiller {
 	height: 100%;
 	width: 100%;
-	padding: 0px;
+	padding-right: 1.5em;
+	width: 25.51em;
+	margin-left: -0.89em;
+	margin-top: 0.1em;
+
 }
 
 .notes {
 	width: 100%;
-	height: 8em;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	height: 12.1em;
+	font-family: inherit;
+	font-size: 14px;
+	color: #95999C;
 } 
+
+.notesInput {
+	width: 100%;
+}
 
