@@ -49,36 +49,6 @@ div.panel {
   div.panel #engagement {
     height: 515px; }
 
-.kingsx h5 {
-  background-color: #90ccde;
-  color: white;
-  padding: 0.5em;
-  margin-top: 1em;
-  margin-bottom: 1em; }
-
-ul.nav-tabs.kingsxNav {
-  background-color: #90ccde;
-  margin-left: 1em;
-  width: 24em; }
-  ul.nav-tabs.kingsxNav li a {
-    color: white;
-    font-size: 0.7em;
-    padding-left: 1em;
-    padding-right: 1em; }
-  ul.nav-tabs.kingsxNav a:hover {
-    background-color: initial;
-    border: none; }
-
-#kingsdiv {
-  height: 500px; }
-
-.kingxNav {
-  background-color: #90ccde;
-  width: 100%;
-  padding: 1em; }
-  .kingxNav ul li {
-    color: white; }
-
 li.active1 {
   background-color: #95999C; }
 
@@ -111,5 +81,69 @@ li.active1 {
 
 .notesInput {
   width: 100%; }
+
+.kingsx h5 {
+  background-color: #90ccde;
+  color: white;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+ul.nav-tabs.kingsxNav {
+  background-color: #90ccde;
+  margin-left: 1em;
+  width: 25em;
+  height: 1.78em; }
+  ul.nav-tabs.kingsxNav li a {
+    color: white;
+    font-size: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em; }
+  ul.nav-tabs.kingsxNav a:hover {
+    background-color: initial;
+    border: none; }
+
+#kingsdiv {
+  height: 500px;
+  background-color: #DBEDF4; }
+
+.kingxNav {
+  background-color: #90ccde;
+  width: 100%;
+  padding: 1em; }
+  .kingxNav ul li {
+    color: white; }
+
+.covg h5 {
+  background-color: #E66D00;
+  color: white;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+ul.nav-tabs.covgNav {
+  background-color: #E66D00;
+  margin-left: 1em;
+  width: 25em;
+  height: 1.78em; }
+  ul.nav-tabs.covgNav li a {
+    color: white;
+    font-size: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em; }
+  ul.nav-tabs.covgNav a:hover {
+    background-color: initial;
+    border: none; }
+
+#covgdiv {
+  height: 500px;
+  background-color: #FFDFC4; }
+
+.covgNav {
+  background-color: #E66D00;
+  width: 100%;
+  padding: 1em; }
+  .covgNav ul li {
+    color: white; }
 
 /*# sourceMappingURL=main.css.map */
