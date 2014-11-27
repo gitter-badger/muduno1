@@ -4,8 +4,7 @@ $(document).ready(function (){
     $("#embankmentVisualised").hide();
     $("#barbicanVisualised").hide();
     $("#liverpoolstVisualised").hide();
-    $("#oxfordCircusVisualised").hide();  
-    console.log("ben"); 
+    $("#oxfordCircusVisualised").hide();   
 });
 $("#new").on("click", function (){
     $("#kingsCrossVisualised").show();
