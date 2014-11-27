@@ -1,7 +1,7 @@
 body {
   font-size: 16px; }
   body .container-fluid {
-    background-color: #90ccde; }
+    background-color: rgba(144, 204, 222, 0.57); }
     body .container-fluid .row .main-wrapper {
       background-color: #fff;
       border-left: 6px #bbb solid;
